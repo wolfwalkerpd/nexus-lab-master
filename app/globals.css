@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f4f0e6;
+  --bg-rgb: 244, 240, 230;
+  --panel: #ede7d8;
+  --card: #fbf9f3;
+  --ink: #191712;
+  --ink-rgb: 25, 23, 18;
+  --dark-panel: #221f18;
+  --muted: #4a453c;
+  --muted2: #6b6459;
+  --muted3: #8a8375;
+  --muted4: #a99f86;
+  --accent: #b7472a;
+  --accent-hover: #a03d22;
+  --accent-rgb: 183, 71, 42;
+  --accent-weak: #f6ead5;
+  --accent-weak2: #eae3d3;
+  --accent-deep: #a06a4f;
+  --on-dark-muted: #c7bfae;
+  --rowbg: #efe9dd;
+  --rowbg-you: #f8f0e1;
+  --av: #e4dcc8;
+  --ph-a: #e7dfcb;
+  --ph-b: #d8cbae;
+  --ph-c: #cdbe9c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* Stops iOS inflating text when a phone is rotated to landscape. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* `clip` rather than `hidden`: it contains stray overflow without
+     creating a scroll container, which would break the sticky header. */
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Long unbroken strings (URLs, emails) must not force a horizontal scrollbar. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+@keyframes nxload {
+  0%,
+  55% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-wrap px-gutter;
+  }
+  .eyebrow {
+    @apply font-mono text-[12px] font-medium uppercase tracking-[0.22em] text-accent;
+  }
+  .serif {
+    @apply font-display font-normal;
+  }
+  /* min-h keeps every button at or above the 44px touch-target minimum. */
+  .btn-primary {
+    @apply inline-flex min-h-[44px] max-w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-center text-[15px] font-semibold text-white no-underline transition-colors;
+    box-shadow: 0 10px 26px rgba(var(--accent-rgb), 0.3);
+  }
+  .btn-primary:hover {
+    background: var(--accent-hover);
+    color: #fff;
+  }
+  .btn-ghost {
+    @apply inline-flex min-h-[44px] max-w-full items-center justify-center rounded-full border px-6 py-3.5 text-center text-[15px] font-medium text-ink no-underline transition-colors;
+    border-color: rgba(var(--ink-rgb), 0.28);
+  }
+  .btn-ghost:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+  /* Size modifiers — compose with .btn-primary / .btn-ghost. */
+  .btn-lg {
+    @apply px-6 py-4 text-[15px] sm:px-[30px] sm:text-[16px];
+  }
+  .btn-sm {
+    @apply min-h-[40px] px-[18px] py-2.5 text-[14px] sm:px-[22px] sm:text-[14.5px];
+  }
+  .surface {
+    @apply rounded-2xl border bg-card;
+    border-color: rgba(var(--ink-rgb), 0.12);
+  }
+  .hair {
+    border-color: rgba(var(--ink-rgb), 0.1);
+  }
+}

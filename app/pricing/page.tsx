@@ -1,0 +1,107 @@
+import Link from "next/link";
+import CtaBand from "@/components/CtaBand";
+import { BUILD_PLANS, CARE_PLANS } from "@/lib/site";
+import { Metadata } from "next";
+
+export const pricingMetadata: Metadata = {
+  title: "Pricing",
+  description:
+    "Clear, honest pricing — one-off website build packages plus monthly care plans to keep your site fast, secure and up to date. No agency overhead baked in.",
+  alternates: { canonical: "/pricing" },
+  openGraph: {
+    title: "Pricing | Nexus Lab Systems",
+    description:
+      "One-off build packages plus monthly website care plans. Clear and honest.",
+    url: "https://www.nexuslabsystems.com/pricing",
+  },
+};
+
+export default function PricingPage() {
+  return (
+    <>
+      <section className="mx-auto max-w-[900px] px-gutter pb-4 pt-section text-center">
+        <div className="eyebrow mb-[18px]">Pricing</div>
+        <h1 className="serif mb-[22px] text-h1 tracking-[-0.5px]">Clear pricing, before you commit.</h1>
+        <p className="mx-auto max-w-[620px] text-lead text-muted">
+          Two simple parts: a one-off price to build your website, and an optional monthly plan to keep it running. Every project is fixed-price and agreed up front.
+        </p>
+        <p className="mt-[18px] font-mono text-[12px] text-muted3">Figures below are placeholders — your exact quote comes after a free teardown.</p>
+      </section>
+
+      {/* ONE-OFF BUILDS */}
+      <section className="wrap pb-5 pt-11">
+        <div className="mb-2 flex items-center gap-[14px]">
+          <span className="flex-none rounded-full bg-accent px-[14px] py-[6px] font-mono text-[11px] uppercase tracking-[0.16em] text-white">One-off</span>
+          <div className="h-px flex-1" style={{ background: "rgba(var(--ink-rgb),0.14)" }} />
+        </div>
+        <h2 className="serif mb-[6px] text-h3 tracking-[-0.3px]">Website builds</h2>
+        <p className="mb-[34px] max-w-[560px] text-[16px] text-muted2">Pay once. Own it forever. Choose the scope that fits where your business is now.</p>
+        <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-3">
+          {BUILD_PLANS.map((p) => (
+            <div key={p.name} className="surface flex flex-col p-card" style={{ borderColor: p.popular ? "var(--accent)" : undefined }}>
+              <div className="mb-[6px] flex flex-wrap items-center justify-between gap-2">
+                <span className="serif text-h6">{p.name}</span>
+                {p.popular && <span className="rounded-full border border-accent px-[10px] py-[3px] text-[11px] font-semibold text-accent">Most popular</span>}
+              </div>
+              <div className="mb-[22px] min-h-[44px] text-[14px] leading-relaxed text-muted2">{p.desc}</div>
+              <div className="mb-[6px] flex flex-wrap items-baseline gap-2"><span className="text-[14px] text-muted3">from</span><span className="serif text-h3 text-ink">{p.price}</span></div>
+              <div className="mb-[26px] text-[12.5px] text-muted3">one-off</div>
+              <div className="mb-[30px] flex flex-col gap-[11px]">
+                {p.features.map((f) => <div key={f} className="flex gap-[9px] text-[14px] text-muted"><span className="flex-none text-accent">✓</span>{f}</div>)}
+              </div>
+              <Link href="/contact" className={`mt-auto inline-flex min-h-[44px] items-center justify-center rounded-full px-4 py-[13px] text-center text-[14px] font-semibold no-underline ${p.popular ? "bg-ink text-bg" : "border border-ink text-ink hover:bg-ink hover:text-bg"}`}>Start with a teardown</Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="wrap py-[34px]">
+        <div className="flex items-center justify-center gap-3 text-muted3 sm:gap-[18px]">
+          <div className="h-px flex-1" style={{ background: "rgba(var(--ink-rgb),0.14)" }} />
+          <span className="serif flex-none text-center text-[17px] text-muted sm:text-[22px]">then, keep it running</span>
+          <div className="h-px flex-1" style={{ background: "rgba(var(--ink-rgb),0.14)" }} />
+        </div>
+      </section>
+
+      {/* MONTHLY CARE */}
+      <section className="bg-ink text-bg">
+        <div className="wrap py-sectionsm">
+          <div className="mb-2 flex items-center gap-[14px]">
+            <span className="flex-none rounded-full bg-bg px-[14px] py-[6px] font-mono text-[11px] uppercase tracking-[0.16em] text-ink">Monthly</span>
+            <div className="h-px flex-1 bg-white/15" />
+          </div>
+          <h2 className="serif mb-[6px] text-h3 tracking-[-0.3px] text-bg">Care plans</h2>
+          <p className="mb-[34px] max-w-[560px] text-[16px] text-ondark">Optional monthly cover to keep your site fast, safe and current. Cancel any time — no contracts.</p>
+          <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-3">
+            {CARE_PLANS.map((p) => (
+              <div key={p.name} className="flex flex-col rounded-[16px] border bg-darkpanel p-card" style={{ borderColor: p.popular ? "var(--accent)" : "rgba(255,255,255,0.12)" }}>
+                <div className="mb-[6px] flex flex-wrap items-center justify-between gap-2">
+                  <span className="serif text-h6 text-bg">{p.name}</span>
+                  {p.popular && <span className="rounded-full bg-accent px-[10px] py-[3px] text-[11px] font-semibold text-white">Popular</span>}
+                </div>
+                <div className="mb-[22px] min-h-[44px] text-[14px] text-muted3">{p.desc}</div>
+                <div className="mb-[26px] flex flex-wrap items-baseline gap-2"><span className="text-[14px] text-muted3">from</span><span className="serif text-h3 text-bg">{p.price}</span><span className="text-[14px] text-muted3">{p.suffix}</span></div>
+                <div className="mb-[30px] flex flex-col gap-[11px]">
+                  {p.features.map((f) => <div key={f} className="flex gap-[9px] text-[14px] text-[color:#e7e0d2]"><span className="flex-none text-accent">✓</span>{f}</div>)}
+                </div>
+                <Link href="/contact" className={`mt-auto inline-flex min-h-[44px] items-center justify-center rounded-full px-4 py-[13px] text-center text-[14px] font-semibold no-underline ${p.popular ? "bg-accent text-white" : "border border-white/30 text-bg"}`}>Choose {p.name}</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="wrap pb-5 pt-14">
+        <div className="surface flex flex-wrap items-center justify-between gap-6 bg-panel p-card">
+          <div className="min-w-0">
+            <div className="serif mb-[6px] text-h6">Every build includes the essentials</div>
+            <div className="max-w-[640px] text-[14.5px] text-muted2">A bespoke design, mobile-perfect pages, an admin panel, analytics and full ownership — whichever tier you choose. No essential feature is locked behind the top price.</div>
+          </div>
+          <Link href="/contact" className="whitespace-nowrap text-[14.5px] font-semibold text-accent">Get a fixed quote →</Link>
+        </div>
+      </section>
+
+      <CtaBand heading="Want a real number for your project?" sub="Book a free teardown and you'll get a fixed, honest quote — no obligation to go ahead." />
+    </>
+  );
+}
