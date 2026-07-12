@@ -3,6 +3,26 @@ import FadeIn from "@/components/FadeIn";
 import { EMAIL, NAV } from "@/lib/site";
 
 export default function SiteFooter() {
+  const media = [
+    {name: 'Instagram',
+    link : 'https://www.instagram.com/nexuslab.systems?igsh=MXR3ZmJsOWhjM2NhZw=='
+    },
+    {name: 'Facebook',
+    link : 'https://www.facebook.com/share/1H78imojpE/'
+    },
+    {name: 'X(Twitter)',
+    link : 'https://x.com/NexusLabsystems'
+    },
+    {name: 'LinkedIn',
+    link : 'https://www.linkedin.com/in/mohammad-javad-samadi-13b134222/'
+    },
+    {name: 'TikTok',
+    link : 'https://www.tiktok.com/@nexuslabsystems?_r=1&_t=ZT-97yA1odQDPh'
+    },
+    {name: 'Pinterest',
+    link : 'https://pin.it/3ymeaoQw9'
+    },
+  ]
   return (
     <footer className="bg-ink text-ondark">
       <FadeIn>
@@ -65,9 +85,9 @@ export default function SiteFooter() {
             Follow
           </div>
           <div className="flex flex-col gap-2 text-[14.5px]">
-            {["Instagram", "LinkedIn", "Facebook", "X (Twitter)"].map((s) => (
-              <a key={s} href="#" className="py-1 text-ondark no-underline hover:text-bg">
-                {s}
+            {media.map((s) => (
+              <a key={s.name} href={s.link} target="_blank" className="py-1 text-ondark no-underline hover:text-bg">
+                {s.name}
               </a>
             ))}
           </div>
