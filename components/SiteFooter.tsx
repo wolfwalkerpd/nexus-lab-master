@@ -4,25 +4,21 @@ import { EMAIL, NAV } from "@/lib/site";
 
 export default function SiteFooter() {
   const media = [
-    {name: 'Instagram',
-    link : 'https://www.instagram.com/nexuslab.systems?igsh=MXR3ZmJsOWhjM2NhZw=='
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/nexuslab.systems?igsh=MXR3ZmJsOWhjM2NhZw==",
     },
-    {name: 'Facebook',
-    link : 'https://www.facebook.com/share/1H78imojpE/'
+    { name: "Facebook", link: "https://www.facebook.com/share/1H78imojpE/" },
+    { name: "X(Twitter)", link: "https://x.com/NexusLabsystems" },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/mohammad-javad-samadi-13b134222/",
     },
-    {name: 'X(Twitter)',
-    link : 'https://x.com/NexusLabsystems'
+    {
+      name: "TikTok",
+      link: "https://www.tiktok.com/@nexuslabsystems?_r=1&_t=ZT-97yA1odQDPh",
     },
-    {name: 'LinkedIn',
-    link : 'https://www.linkedin.com/in/mohammad-javad-samadi-13b134222/'
-    },
-    {name: 'TikTok',
-    link : 'https://www.tiktok.com/@nexuslabsystems?_r=1&_t=ZT-97yA1odQDPh'
-    },
-    {name: 'Pinterest',
-    link : 'https://pin.it/3ymeaoQw9'
-    },
-  ]
+  ];
   return (
     <footer className="bg-ink text-ondark">
       <FadeIn>
@@ -32,9 +28,9 @@ export default function SiteFooter() {
               Not sure where your website is losing you customers?
             </div>
             <div className="mt-3 max-w-[520px] text-[15px] leading-relaxed text-muted3">
-              Book a free teardown — we screen-record your site, show you exactly
-              what&apos;s costing you leads, and how we&apos;d fix it. No pitch, no
-              obligation.
+              Book a free teardown — we screen-record your site, show you
+              exactly what&apos;s costing you leads, and how we&apos;d fix it.
+              No pitch, no obligation.
             </div>
           </div>
           <Link href="/contact" className="btn-primary btn-lg w-full sm:w-auto">
@@ -52,14 +48,13 @@ export default function SiteFooter() {
             <span className="serif text-[22px] text-bg">Nexus LabSystems</span>
           </Link>
           <p className="my-5 max-w-[340px] text-[14px] leading-relaxed text-muted3">
-            We design, build and grow websites for ambitious businesses across the
-            UK — plus SEO, branding, copy and an admin panel so you can run it all
-            yourself.
+            We design, build and grow websites for ambitious businesses across
+            the UK — plus SEO, branding, copy and an admin panel so you can run
+            it all yourself.
           </p>
           <a
             href={`mailto:${EMAIL}`}
-            className="inline-block border-b border-white/30 pb-[2px] text-[15px] text-bg no-underline"
-          >
+            className="inline-block border-b border-white/30 pb-[2px] text-[15px] text-bg no-underline">
             {EMAIL}
           </a>
         </FadeIn>
@@ -70,11 +65,16 @@ export default function SiteFooter() {
           </div>
           <div className="flex flex-col gap-2 text-[14.5px]">
             {NAV.map((it) => (
-              <Link key={it.href} href={it.href} className="py-1 text-ondark no-underline hover:text-bg">
+              <Link
+                key={it.href}
+                href={it.href}
+                className="py-1 text-ondark no-underline hover:text-bg">
                 {it.label}
               </Link>
             ))}
-            <Link href="/contact" className="py-1 text-ondark no-underline hover:text-bg">
+            <Link
+              href="/contact"
+              className="py-1 text-ondark no-underline hover:text-bg">
               Contact
             </Link>
           </div>
@@ -86,7 +86,11 @@ export default function SiteFooter() {
           </div>
           <div className="flex flex-col gap-2 text-[14.5px]">
             {media.map((s) => (
-              <a key={s.name} href={s.link} target="_blank" className="py-1 text-ondark no-underline hover:text-bg">
+              <a
+                key={s.name}
+                href={s.link}
+                target="_blank"
+                className="py-1 text-ondark no-underline hover:text-bg">
                 {s.name}
               </a>
             ))}
@@ -97,8 +101,16 @@ export default function SiteFooter() {
       <div className="wrap flex flex-wrap items-center justify-between gap-[10px] border-t border-white/10 py-[18px] text-[12.5px] text-muted3">
         <span>© 2026 Nexus LabSystems. All rights reserved.</span>
         <div className="flex gap-5">
-          <Link href="/privacy" className="py-1 text-muted3 no-underline hover:text-ondark">Privacy</Link>
-          <Link href="/contact" className="py-1 text-muted3 no-underline hover:text-ondark">Contact</Link>
+          <Link
+            href="/privacy"
+            className="py-1 text-muted3 no-underline hover:text-ondark">
+            Privacy
+          </Link>
+          <Link
+            href="/contact"
+            className="py-1 text-muted3 no-underline hover:text-ondark">
+            Contact
+          </Link>
         </div>
       </div>
     </footer>
