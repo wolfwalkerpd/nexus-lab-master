@@ -2,6 +2,7 @@ import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Industries We Build For",
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
 };
 
 const cards = [
-  { href: "/industries/dental", label: "Dental & Healthcare", grad: "linear-gradient(150deg,#2FA8C4,#1E7E96)", blurb: "Fill the chair with online booking, new-patient offers and the trust signals patients look for before they pick up the phone.", bullets: ["Online booking", "New-patient funnels", "Reviews & trust"] },
-  { href: "/industries/professional", label: "Professional Services", grad: "linear-gradient(150deg,#2E7D5B,#1c5540)", blurb: "Solicitors, accountants and consultants win on credibility. We build sites that make you the safe, obvious choice.", bullets: ["Clear services", "Credibility & proof", "Easy enquiry"] },
-  { href: "/industries/trades", label: "Trades & Local Business", grad: "linear-gradient(150deg,#E5892B,#B4610F)", blurb: "Roofers, electricians, builders — show your work, capture quote requests and look bigger than the competition.", bullets: ["Quote requests", "Photo galleries", "Click-to-call"] },
+  { href: "/industries/dental", label: "Dental & Healthcare",img:`/preview-dental.svg`, grad: "linear-gradient(150deg,#2FA8C4,#1E7E96)", blurb: "Fill the chair with online booking, new-patient offers and the trust signals patients look for before they pick up the phone.", bullets: ["Online booking", "New-patient funnels", "Reviews & trust"] },
+  { href: "/industries/professional", label: "Professional Services",img:`/preview-trades.svg`, grad: "linear-gradient(150deg,#2E7D5B,#1c5540)", blurb: "Solicitors, accountants and consultants win on credibility. We build sites that make you the safe, obvious choice.", bullets: ["Clear services", "Credibility & proof", "Easy enquiry"] },
+  { href: "/industries/trades", label: "Trades & Local Business",img:`/preview-service.svg`, grad: "linear-gradient(150deg,#E5892B,#B4610F)", blurb: "Roofers, electricians, builders — show your work, capture quote requests and look bigger than the competition.", bullets: ["Quote requests", "Photo galleries", "Click-to-call"] },
 ];
 
 export default function IndustriesPage() {
@@ -40,8 +41,16 @@ export default function IndustriesPage() {
           {cards.map((c) => (
             <FadeIn key={c.href}>
               <Link href={c.href} className="surface grid grid-cols-1 items-center gap-6 overflow-hidden text-ink no-underline transition-colors hover:border-ink/30 md:grid-cols-[0.8fr_1.2fr] md:gap-8">
-                <div className="flex aspect-[16/11] h-full items-end p-[22px]" style={{ background: c.grad }}>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/90">{c.label}</span>
+                {/* 4:3 frame matches the SVG so the mockup fits with no crop;
+                    its transparent margins let the gradient show as a thin frame. */}
+                <div className="relative aspect-[4/3] overflow-hidden" style={{ background: c.grad }}>
+                  <Image
+                    src={c.img}
+                    alt={`${c.label} website preview`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="px-gutter pb-[30px] md:py-[30px] md:pl-0 md:pr-[34px]">
                   <h2 className="serif mb-[10px] text-h5">{c.label}</h2>

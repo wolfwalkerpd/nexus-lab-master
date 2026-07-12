@@ -7,6 +7,7 @@ export const NAV: NavItem[] = [
   { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export const EMAIL = "contact@nexuslabsystems.com";
@@ -142,7 +143,9 @@ export type Project = {
   name: string;
   kind: string;
   tag: string;
-  grad: string;
+  img: string;
+  /** Optional CSS gradient fallback — kept so `w.grad` never breaks the build. */
+  grad?: string;
   blurb: string;
   metrics: { value: string; label: string }[];
 };
@@ -150,21 +153,21 @@ export type Project = {
 export const WORK: Project[] = [
   {
     slug: "bright-smile-dental", name: "Bright Smile Dental", kind: "Website + SEO", tag: "Dental",
-    grad: "linear-gradient(135deg,#2FA8C4,#1E7E96)",
+    img: "/image.png",
     blurb: "A tired brochure site rebuilt into a booking machine — with local SEO that put them on the map, literally.",
-    metrics: [{ value: "[+X%]", label: "online bookings" }, { value: "[#X]", label: 'for "dentist near me"' }],
+    metrics: [{ value: "+1%", label: "online bookings" }, { value: "#1", label: 'for "dentist near me"' }],
   },
   {
     slug: "apex-roofing", name: "Apex Roofing", kind: "Website + Brand", tag: "Trades",
-    grad: "linear-gradient(135deg,#E5892B,#B4610F)",
+    img: "/image2.png",
     blurb: "A new brand and a website that turned a word-of-mouth roofer into the area's obvious choice.",
-    metrics: [{ value: "[+X%]", label: "quote requests" }, { value: "[X]", label: "towns ranked" }],
+    metrics: [{ value: "+1%", label: "quote requests" }, { value: "#1", label: "towns ranked" }],
   },
   {
     slug: "copper-kitchen", name: "The Copper Kitchen", kind: "Website", tag: "Hospitality",
-    grad: "linear-gradient(135deg,#C64B3B,#8F2E22)",
+    img: "/image1.png",
     blurb: "A restaurant site with live menus and bookings that filled tables on the quiet nights.",
-    metrics: [{ value: "[+X%]", label: "online reservations" }, { value: "[+X%]", label: "midweek covers" }],
+    metrics: [{ value: "+1%", label: "online reservations" }, { value: "+1%", label: "midweek covers" }],
   },
 ];
 
@@ -178,51 +181,77 @@ export type Plan = {
 };
 
 export const BUILD_PLANS: Plan[] = [
-  { name: "Starter", price: "£[PLACEHOLDER]", desc: "A sharp, small site to get you online and taking enquiries fast.", features: ["1–3 pages, bespoke design", "Mobile-perfect & fast", "Contact form + map", "Basic on-page SEO", "Admin panel + 30 days aftercare"] },
-  { name: "Growth", price: "£[PLACEHOLDER]", popular: true, desc: "The complete small-business site — designed, written and optimised.", features: ["5–8 pages, everything in Starter", "Branding refresh + logo", "SEO foundations + Google Business", "Professional copywriting", "Booking / quote flows"] },
-  { name: "Complete", price: "£[PLACEHOLDER]", desc: "Everything, done for you — the full brand, site, copy and SEO.", features: ["8+ pages, everything in Growth", "Full brand identity", "Advanced SEO + content plan", "Full site copywriting", "Priority build + team training"] },
+  { name: "Starter", price: "£795", desc: "A sharp, small site to get you online and taking enquiries fast.", features: ["1–3 pages, bespoke design", "Mobile-perfect & fast", "Contact form + map", "Basic on-page SEO", "Admin panel + 30 days aftercare"] },
+  { name: "Growth", price: "£1,950", popular: true, desc: "The complete small-business site — designed, written and optimised.", features: ["5–8 pages, everything in Starter", "Branding refresh + logo", "SEO foundations + Google Business", "Professional copywriting", "Booking / quote flows"] },
+  { name: "Complete", price: "£3,950", desc: "Everything, done for you — the full brand, site, copy and SEO.", features: ["8+ pages, everything in Growth", "Full brand identity", "Advanced SEO + content plan", "Full site copywriting", "Priority build + team training"] },
 ];
 
 export const CARE_PLANS: Plan[] = [
-  { name: "Essential", price: "£[PLACEHOLDER]", suffix: "/mo", desc: "The safety net every website needs.", features: ["Managed UK hosting", "SSL & security monitoring", "Daily backups", "Software & uptime monitoring"] },
-  { name: "Growth", price: "£[PLACEHOLDER]", suffix: "/mo", popular: true, desc: "Care plus regular edits and priority support.", features: ["Everything in Essential", "Monthly content edits", "Priority email support", "Performance reviews"] },
-  { name: "Priority", price: "£[PLACEHOLDER]", suffix: "/mo", desc: "Hands-on care and ongoing improvements.", features: ["Everything in Growth", "Priority turnaround", "Quarterly strategy call", "Ongoing improvements"] },
+  { name: "Essential", price: "£39 /mo", suffix: "/mo", desc: "The safety net every website needs.", features: ["Managed UK hosting", "SSL & security monitoring", "Daily backups", "Software & uptime monitoring"] },
+  { name: "Growth", price: "£89 /mo", suffix: "/mo", popular: true, desc: "Care plus regular edits and priority support.", features: ["Everything in Essential", "Monthly content edits", "Priority email support", "Performance reviews"] },
+  { name: "Priority", price: "£179 /mo", suffix: "/mo", desc: "Hands-on care and ongoing improvements.", features: ["Everything in Growth", "Priority turnaround", "Quarterly strategy call", "Ongoing improvements"] },
 ];
 
 export type Faq = { q: string; a: string };
 
 export const HOME_FAQ: Faq[] = [
-  { q: 'What exactly is a "free teardown"?', a: "We record a short screen video reviewing your current website (or a competitor's, if you don't have one yet) — showing what's working, what's quietly losing you customers, and the changes we'd make. It's yours to keep, whether or not you work with us." },
+{ q: 'What exactly is a "free teardown"?', a: "We record a short screen video reviewing your current website (or a competitor's, if you don't have one yet) — showing what's working, what's quietly losing you customers, and the changes we'd make. It's yours to keep, whether or not you work with us." },
   { q: "How much does a website cost?", a: "Every project is fixed-price, so you know the number before we start — no hourly billing, no surprises. Pricing depends on how many pages and features you need. You can see the tiers on our pricing page." },
-  { q: "How long does it take?", a: "Most sites go live in three to six weeks, depending on scope and how quickly we get your content and feedback. We'll give you a clear timeline before we begin." },
-  { q: "Do I own the website?", a: "Yes — completely. You own the site, the domain and all of your data. There's no lock-in and nothing held hostage if you ever decide to move on." },
-  { q: "Can I update it myself?", a: "Every build includes a simple admin panel so you can change text, images, prices and offers yourself, any time — no developer required. We'll show you how." },
-  { q: "What if I already have a website?", a: "Great — we'll review it in your free teardown and tell you honestly whether it needs a full rebuild or just some targeted improvements. Sometimes a few changes are all it takes." },
+  { q: "How long does it take?", a: "Most sites go live in one to three weeks, depending on scope and how quickly we get your content and feedback. We'll give you a clear timeline before we begin." },
+  { q: "Will my website actually bring in customers?", a: "That's the whole point of it. We build sites to be found on Google and to turn visitors into enquiries and calls — not just to look nice. In your free teardown we'll show you exactly where your current site is losing customers and how we'd fix it." },
+  { q: "Do I own the website, or am I tied in?", a: "You own everything — the site, the domain and all your data — with no lock-in. Ongoing care plans are completely optional; they're there if you'd rather we handled updates and hosting for you, not to trap you." },
+  { q: "What if I already have a website?", a: "Great — we'll review it in your free teardown and tell you honestly whether it needs a full rebuild or just some targeted improvements. Sometimes a few changes are all it takes, and we'll say so if that's the case." },
+  { q: "How do I get started?", a: "Book your free teardown. There's no obligation and nothing to pay — you'll get a genuinely useful video review of your site, and if it feels like a fit, we'll take it from there. If not, the teardown is still yours to keep." },
 ];
 
 export const ABOUT_FAQ: Faq[] = [
-  { q: "Who will I actually work with?", a: "The same small team throughout — the people designing and building your site, not a rotating cast of account managers. When you email or call, you reach someone who knows your project." },
-  { q: "Are you a big agency?", a: "No, and deliberately so. We're a lean studio, which keeps us fast, personal and far more affordable than a traditional agency with layers of overhead." },
-  { q: "Where are you based?", a: "We're UK-based and work with clients across the country — mostly remotely, with calls and screen-shares whenever you need them." },
-  { q: "Do you work with my industry?", a: "We specialise in dental & healthcare, professional services and trades & local business, but the same principles win customers for most local and service businesses. If we're not the right fit, we'll tell you." },
-  { q: "What if I already have a website?", a: "Perfect — we'll review it in a free teardown and tell you honestly whether it needs a full rebuild or just some targeted improvements." },
-  { q: "How do we get started?", a: "Book a free teardown. There's no obligation — it's simply the easiest way to see what's possible and whether we're a good fit for each other." },
+{ q: "Who will I actually be dealing with?", a: "One person, from first hello to launch and beyond. The person who reviews your site is the person who builds it and the person who picks up the phone when you call. Nothing gets passed to a junior or lost in a handoff, because there is no handoff." },
+  { q: "Why choose one person over a big agency?", a: "With an agency you meet the salesperson, then your project goes to whoever's free — often someone you never speak to. You become a ticket in a queue. With us you get one accountable point of contact, work that's done with genuine care because your name is recognised, and none of the agency overhead padding your invoice." },
+  { q: "Are you experienced enough to trust with my business?", a: "We build and run real, live software — not slideware or templates — so your site is made by someone who genuinely understands both the craft and how local businesses win customers. We only take on work we can do properly, and we'll tell you honestly if something isn't the right fit for us." },
+  { q: "Do you understand my kind of business?", a: "We work with local and service-based businesses that live or die by trust — the same thing your customers are judging when they land on your site. That perspective shapes every build: it's not about looking flashy, it's about making your business the obvious, trustworthy choice." },
+  { q: "What if it goes wrong, or I'm not happy?", a: "We agree the direction early and work through it with you before launch, so you're never surprised at the end — you see it taking shape and have your say throughout. And because you own your site and domain outright, you're never stuck or held hostage. Honesty and no lock-in are the whole point." },
+  { q: "What's it actually like to work with you?", a: "Straightforward and jargon-free. Most of our clients aren't technical, so we explain everything in plain English, handle the technical side for you, and keep you in the loop without burying you in detail. You run your business; we make the website side easy." },
 ];
 
-export type BlogPost = {
-  slug: string;
-  category: string;
-  title: string;
-  excerpt: string;
-  read: string;
-  grad: string;
-};
+// Full help-centre FAQ (dedicated /faq page). `label` shows on the filter chip,
+// `title` is the section heading.
+export type FaqCategory = { key: string; label: string; title: string };
 
-export const BLOG_POSTS: BlogPost[] = [
-  { slug: "why-customers-leave", category: "Websites", title: "Why local customers leave your website in 5 seconds", excerpt: "The most common reasons visitors bounce — and the quick, unglamorous fixes that keep them reading, and booking.", read: "6 min read", grad: "linear-gradient(135deg,#B7472A,#8f3520)" },
-  { slug: "why-customers-leave", category: "SEO", title: "The local map pack, explained", excerpt: "What those top-three map results are, why they win the calls, and how to get in.", read: "5 min read", grad: "linear-gradient(135deg,#2FA8C4,#1E7E96)" },
-  { slug: "why-customers-leave", category: "Websites", title: "Do you really own your website?", excerpt: "Three quick checks to make sure your site, domain and data are actually yours.", read: "4 min read", grad: "linear-gradient(135deg,#7A5AF0,#4A32B0)" },
-  { slug: "why-customers-leave", category: "Local marketing", title: "5 things every trades website needs", excerpt: "The essentials that turn a phone-in-hand visitor into a quote request.", read: "5 min read", grad: "linear-gradient(135deg,#E5892B,#B4610F)" },
-  { slug: "why-customers-leave", category: "SEO", title: "The free Google tool most businesses ignore", excerpt: "Your Google Business Profile is free, powerful, and usually half-empty. Let's fix that.", read: "6 min read", grad: "linear-gradient(135deg,#2E7D5B,#1c5540)" },
-  { slug: "why-customers-leave", category: "Business", title: "Fixed price vs hourly: why we quote up front", excerpt: "Why open-ended invoices hurt small businesses — and how fixed pricing protects you.", read: "4 min read", grad: "linear-gradient(135deg,#C64B3B,#8F2E22)" },
+export const FAQ_CATEGORIES: FaqCategory[] = [
+  { key: "start", label: "Getting started", title: "Getting started" },
+  { key: "pricing", label: "Pricing", title: "Pricing" },
+  { key: "process", label: "Process & build", title: "Process & build" },
+  { key: "owning", label: "Owning & running", title: "Owning & running your site" },
+  { key: "seo", label: "SEO & growth", title: "SEO & growth" },
+];
+
+export type SiteFaq = { cat: FaqCategory["key"]; q: string; a: string };
+
+export const SITE_FAQS: SiteFaq[] = [
+  { cat: "start", q: "What exactly is a \"free teardown\"?", a: "We record a short screen video reviewing your current website (or a competitor's, if you don't have one yet) — showing what's working, what's quietly losing you customers, and the three changes we'd make first. It's yours to keep, whether or not you work with us." },
+  { cat: "start", q: "Do I have to commit to anything to get one?", a: "Not at all. The teardown is genuinely free and there's no obligation. Plenty of people use it as a second opinion on work someone else has done — that's completely fine." },
+  { cat: "start", q: "I don't have a website yet — can you still help?", a: "Absolutely. We'll review a couple of your competitors instead and show you what it would take to beat them from day one. Starting fresh is often faster and cheaper than fixing an old site." },
+  { cat: "start", q: "How do we actually get started?", a: "Book a teardown, we talk through what you need, and you get a fixed-price proposal. If it's a fit, we schedule a start date. If it's not, no hard feelings — you still keep the teardown." },
+  { cat: "pricing", q: "How much does a website cost?", a: "Every project is fixed-price, so you know the number before we start — no hourly billing and no surprises. The figure depends on how many pages and features you need; you can see the tiers on our pricing page." },
+  { cat: "pricing", q: "Why fixed price instead of hourly?", a: "Hourly billing punishes you for our learning curve and makes budgeting impossible. A fixed price means we carry the risk of things taking longer, not you — and you can say yes with total clarity on cost." },
+  { cat: "pricing", q: "Are there any ongoing fees?", a: "Only if you want a care plan. The build is a one-off cost. Care plans (hosting, backups, security and edits) are an optional monthly subscription you can start, pause or cancel any time." },
+  { cat: "pricing", q: "Do you offer payment in instalments?", a: "Yes. Most projects are split across a deposit and one or more milestone payments so the cost is spread through the build rather than landing all at once. We'll agree the schedule up front." },
+  { cat: "process", q: "How long does a project take?", a: "Most sites go live in three to six weeks, depending on scope and how quickly we get your content and feedback. We'll give you a clear timeline before we begin and keep you posted throughout." },
+  { cat: "process", q: "What do you need from me?", a: "Mostly your input and sign-off at a few key stages, plus any photos, logos or specific content you want included. If you don't have polished content, we can write it for you — that's what our copywriting is for." },
+  { cat: "process", q: "How involved will I be?", a: "As involved as you'd like. You'll review the design before we build and see the site as it comes together, with clear points to give feedback. No surprises at launch — you'll have seen it all." },
+  { cat: "process", q: "Can you write the content for me?", a: "Yes. Copywriting is part of our Growth and Complete packages, and available as an add-on otherwise. We write for real customers — clear, persuasive and tuned to how people actually decide." },
+  { cat: "process", q: "What happens on launch day?", a: "We handle the technical side — connecting your domain, final checks and going live. Then we train you on the admin panel and stay on hand for 30 days to sort anything that comes up." },
+  { cat: "owning", q: "Do I own the website?", a: "Yes — completely. You own the site, the domain and all of your data. There's no lock-in and nothing held hostage if you ever decide to move on to someone else." },
+  { cat: "owning", q: "Can I update the site myself?", a: "Every build includes a simple admin panel so you can change text, images, prices and offers yourself, any time — no developer required. We'll show you exactly how during handover." },
+  { cat: "owning", q: "What if I want to leave later?", a: "You take everything with you — no exit fees, no drama. Because you own the site, domain and data outright, another developer can pick it up without starting from scratch." },
+  { cat: "owning", q: "What does a care plan actually cover?", a: "Managed hosting, SSL and security, daily backups, software updates and uptime monitoring as standard — plus monthly content edits and priority support on higher tiers. Essentially, we keep it fast, safe and current so you don't have to think about it." },
+  { cat: "seo", q: "Will my site show up on Google?", a: "Every site we build is structured for SEO from the ground up. Getting to the top for competitive local searches is an ongoing effort — that's what our SEO service is for — but you'll launch on solid technical foundations." },
+  { cat: "seo", q: "How long does SEO take to work?", a: "Anyone promising page one in a week is lying. Real rankings build over weeks and months — but once they're there, they keep paying you back long after the work is done. We'll tell you what's realistic for your market up front." },
+  { cat: "seo", q: "What's the local map pack, and can you get me in it?", a: "It's the top-three local results with a map that sit above everything else — and they win most of the calls. We optimise your Google Business Profile, reviews and local signals to get you into it and keep you there." },
+  { cat: "trust", q: "It's just one person — what if you're ill or unavailable?", a: "Fair question. Because you own your site, domain and data outright, you're never locked to me — but in practice I keep everything documented and backed up so nothing depends on me being reachable at a single moment. For anything urgent post-launch, care-plan clients get priority response." },
+  { cat: "trust", q: "How do I know the work will actually be good?", a: "Look at the teardown itself — it's a live sample of how I think about your site before you've paid anything. Beyond that, you'll see the design before we build and review the site as it comes together, so you're never trusting blind. And you can see real examples in our work." },
+  { cat: "trust", q: "Do you work with businesses like mine?", a: "Most likely yes. I build for local and service-based businesses that win customers on trust — dentists, trades, professional services and similar. That's the same thing your customers judge when they land on your site, so it shapes everything I build." },
+  { cat: "process", q: "What if I don't like the design?", a: "You'll see and approve the design direction before any building starts, so we catch that early rather than at the end. Revisions at the design stage are part of the process — the goal is that by launch, there are no surprises because you've shaped it the whole way." },
+  { cat: "pricing", q: "Is there a cheaper option if I'm on a tight budget?", a: "The Starter package is built exactly for that — a clean, professional site covering the essentials, with room to grow later. In your teardown I'll be honest about what you actually need versus what can wait, so you're not paying for things that won't move the needle yet." },
+  { cat: "seo", q: "Can you help me get more reviews and calls, not just traffic?", a: "That's the real goal — traffic only matters if it turns into enquiries. Alongside SEO, I focus on the things that convert visitors into calls: clear calls-to-action, easy contact, trust signals and a Google Business Profile set up to earn reviews. Rankings and results, not just numbers." },
 ];

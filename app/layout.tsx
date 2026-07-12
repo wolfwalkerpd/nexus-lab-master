@@ -126,11 +126,8 @@ keywords: [
     // creator: "@yourhandle", // add if you have one
   },
 
-  // Icons — if you use the app/ file conventions (favicon.ico, icon.png,
-  // apple-icon.png) you can DELETE this block; Next wires them automatically.
-  icons: {
-    icon: "/icon.png",
-  },
+  // Icons are wired automatically from app/icon.svg (Next file convention),
+  // so no manual `icons` block is needed here.
 
   robots: {
     index: true,

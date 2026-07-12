@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" font-family="'Work Sans',system-ui,sans-serif">
+  <defs><filter id="sh" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#191712" flood-opacity="0.18"/></filter></defs>
+  <g filter="url(#sh)">
+    <rect x="10" y="10" width="540" height="400" rx="14" fill="#fbf9f3" stroke="#1917121a"/>
+    <rect x="10" y="10" width="540" height="40" rx="14" fill="#ede7d8"/>
+    <rect x="10" y="34" width="540" height="16" fill="#ede7d8"/>
+    <circle cx="34" cy="30" r="5.5" fill="#b7472a"/><circle cx="52" cy="30" r="5.5" fill="#d6b24a"/><circle cx="70" cy="30" r="5.5" fill="#7a9a6d"/>
+    <rect x="92" y="21" width="420" height="18" rx="9" fill="#fbf9f3"/>
+    <text x="106" y="34" font-size="11" fill="#8a8578" font-family="'IBM Plex Mono',monospace">dental-clinic.co.uk</text>
+  </g>
+  <clipPath id="page"><rect x="10" y="50" width="540" height="360"/></clipPath>
+  <g clip-path="url(#page)">
+
+  <rect x="10" y="50" width="540" height="360" fill="#fbf9f3"/>
+  <rect x="34" y="66" width="22" height="22" rx="6" fill="#2f8f86"/>
+  <rect x="64" y="72" width="90" height="11" rx="5.5" fill="#191712" opacity="0.85"/>
+  <rect x="360" y="73" width="34" height="7" rx="3.5" fill="#8a8578" opacity="0.6"/><rect x="404" y="73" width="30" height="7" rx="3.5" fill="#8a8578" opacity="0.6"/>
+  <rect x="470" y="70" width="66" height="20" rx="10" fill="#2f8f86"/><text x="503" y="83" font-size="9" fill="#fff" text-anchor="middle" font-weight="600">Book now</text>
+  <rect x="34" y="112" width="80" height="9" rx="4.5" fill="#2f8f86"/>
+  <rect x="34" y="132" width="240" height="20" rx="5" fill="#191712"/>
+  <rect x="34" y="160" width="200" height="20" rx="5" fill="#191712"/>
+  <rect x="34" y="196" width="240" height="7" rx="3.5" fill="#8a8578" opacity="0.55"/>
+  <rect x="34" y="210" width="200" height="7" rx="3.5" fill="#8a8578" opacity="0.55"/>
+  <rect x="34" y="234" width="130" height="34" rx="17" fill="#2f8f86"/><text x="99" y="256" font-size="11" fill="#fff" text-anchor="middle" font-weight="600">Book a check-up</text>
+  <rect x="176" y="234" width="90" height="34" rx="17" fill="none" stroke="#19171230"/>
+  <rect x="330" y="112" width="196" height="160" rx="12" fill="#2f8f86" opacity="0.12"/>
+  <circle cx="428" cy="192" r="46" fill="#2f8f86"/><rect x="422" y="170" width="12" height="44" rx="3" fill="#fff"/><rect x="406" y="186" width="44" height="12" rx="3" fill="#fff"/>
+  <rect x="34" y="300" width="150" height="86" rx="10" fill="#ede7d8"/><circle cx="58" cy="326" r="12" fill="#2f8f86"/><rect x="46" y="348" width="110" height="7" rx="3.5" fill="#191712" opacity="0.8"/><rect x="46" y="362" width="90" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+  <rect x="200" y="300" width="150" height="86" rx="10" fill="#ede7d8"/><circle cx="224" cy="326" r="12" fill="#2f8f86"/><rect x="212" y="348" width="110" height="7" rx="3.5" fill="#191712" opacity="0.8"/><rect x="212" y="362" width="90" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+  <rect x="366" y="300" width="160" height="86" rx="10" fill="#ede7d8"/><circle cx="390" cy="326" r="12" fill="#2f8f86"/><rect x="378" y="348" width="120" height="7" rx="3.5" fill="#191712" opacity="0.8"/><rect x="378" y="362" width="96" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+
+  </g>
+</svg>

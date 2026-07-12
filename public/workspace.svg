@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" font-family="'Work Sans',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f0e6"/><stop offset="1" stop-color="#ede7d8"/></linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#191712" flood-opacity="0.14"/></filter>
+    <filter id="sh2" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#191712" flood-opacity="0.13"/></filter>
+    <clipPath id="r"><rect width="480" height="800" rx="18"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#r)">
+    <rect width="480" height="800" fill="url(#bg)"/>
+
+    <!-- TOP: brand ring on back wall -->
+    <circle cx="110" cy="130" r="56" fill="none" stroke="#b7472a" stroke-width="3" opacity="0.4"/>
+    <circle cx="110" cy="130" r="35" fill="none" stroke="#b7472a" stroke-width="3" opacity="0.3"/>
+
+    <!-- floating shelf with books + plant -->
+    <g filter="url(#sh2)"><rect x="270" y="120" width="170" height="13" rx="3" fill="#b98a5e"/></g>
+    <rect x="286" y="78" width="13" height="42" rx="2" fill="#1c2430"/>
+    <rect x="301" y="70" width="13" height="50" rx="2" fill="#b7472a"/>
+    <rect x="316" y="82" width="13" height="38" rx="2" fill="#d6b24a"/>
+    <rect x="331" y="74" width="13" height="46" rx="2" fill="#7a9a6d"/>
+    <path d="M392 120 q-6 -32 -18 -42 M392 120 q0 -36 0 -50 M392 120 q6 -32 18 -42" stroke="#7a9a6d" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M380 120 h24 l-3 -22 h-18 z" fill="#b7472a"/>
+
+    <!-- design tokens swatch chip -->
+    <g filter="url(#sh2)">
+      <rect x="60" y="250" width="120" height="46" rx="10" fill="#fbf9f3"/>
+      <circle cx="84" cy="273" r="11" fill="#1c2430"/><circle cx="110" cy="273" r="11" fill="#b7472a"/><circle cx="136" cy="273" r="11" fill="#d6b24a"/><circle cx="162" cy="273" r="11" fill="#ede7d8" stroke="#19171220"/>
+    </g>
+
+    <!-- MIDDLE: monitor with website -->
+    <g filter="url(#sh)">
+      <rect x="115" y="330" width="260" height="175" rx="10" fill="#1c2430"/>
+      <rect x="123" y="338" width="244" height="159" rx="5" fill="#fbf9f3"/>
+      <rect x="123" y="338" width="244" height="28" rx="5" fill="#ede7d8"/>
+      <circle cx="137" cy="352" r="3.8" fill="#b7472a"/><circle cx="150" cy="352" r="3.8" fill="#d6b24a"/><circle cx="163" cy="352" r="3.8" fill="#7a9a6d"/>
+      <rect x="140" y="384" width="74" height="10" rx="5" fill="#b7472a" opacity="0.9"/>
+      <rect x="140" y="402" width="160" height="15" rx="4" fill="#191712"/>
+      <rect x="140" y="424" width="128" height="15" rx="4" fill="#191712"/>
+      <rect x="140" y="450" width="96" height="26" rx="13" fill="#b7472a"/>
+      <rect x="308" y="384" width="52" height="92" rx="8" fill="#ede7d8"/>
+    </g>
+    <rect x="235" y="505" width="20" height="18" fill="#1c2430"/>
+    <rect x="212" y="521" width="66" height="6" rx="3" fill="#1c2430"/>
+
+    <!-- DESK surface -->
+    <g filter="url(#sh)"><rect x="30" y="560" width="420" height="22" rx="5" fill="#b98a5e"/></g>
+    <rect x="30" y="582" width="420" height="4" fill="#00000018"/>
+    <rect x="70" y="582" width="11" height="120" fill="#b98a5e" opacity="0.85"/>
+    <rect x="399" y="582" width="11" height="120" fill="#b98a5e" opacity="0.85"/>
+
+    <!-- keyboard -->
+    <g filter="url(#sh2)"><rect x="150" y="596" width="180" height="24" rx="5" fill="#fbf9f3"/></g>
+    <g fill="#ede7d8">
+      <rect x="160" y="601" width="10" height="6" rx="1.5"/><rect x="174" y="601" width="10" height="6" rx="1.5"/><rect x="188" y="601" width="10" height="6" rx="1.5"/><rect x="202" y="601" width="10" height="6" rx="1.5"/><rect x="216" y="601" width="10" height="6" rx="1.5"/><rect x="230" y="601" width="10" height="6" rx="1.5"/><rect x="244" y="601" width="10" height="6" rx="1.5"/><rect x="258" y="601" width="10" height="6" rx="1.5"/><rect x="272" y="601" width="10" height="6" rx="1.5"/><rect x="286" y="601" width="10" height="6" rx="1.5"/><rect x="300" y="601" width="10" height="6" rx="1.5"/>
+      <rect x="167" y="611" width="10" height="6" rx="1.5"/><rect x="181" y="611" width="10" height="6" rx="1.5"/><rect x="195" y="611" width="10" height="6" rx="1.5"/><rect x="209" y="611" width="10" height="6" rx="1.5"/><rect x="223" y="611" width="10" height="6" rx="1.5"/><rect x="237" y="611" width="10" height="6" rx="1.5"/><rect x="251" y="611" width="10" height="6" rx="1.5"/><rect x="265" y="611" width="10" height="6" rx="1.5"/><rect x="279" y="611" width="10" height="6" rx="1.5"/><rect x="293" y="611" width="10" height="6" rx="1.5"/>
+    </g>
+
+    <!-- coffee mug -->
+    <g filter="url(#sh2)">
+      <rect x="360" y="524" width="42" height="32" rx="6" fill="#b7472a"/>
+      <path d="M402 531 q17 2 17 13 q0 11 -17 13" fill="none" stroke="#b7472a" stroke-width="4.5"/>
+    </g>
+    <path d="M372 520 q-3 -9 2 -15 M383 520 q-3 -9 2 -15" stroke="#8a8578" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- notebook + pen -->
+    <g filter="url(#sh2)" transform="rotate(-8 95 545)">
+      <rect x="52" y="520" width="96" height="64" rx="6" fill="#fbf9f3"/>
+      <line x1="63" y1="537" x2="138" y2="537" stroke="#8a8578" stroke-width="2" opacity="0.5"/>
+      <line x1="63" y1="552" x2="120" y2="552" stroke="#8a8578" stroke-width="2" opacity="0.5"/>
+      <line x1="63" y1="567" x2="130" y2="567" stroke="#8a8578" stroke-width="2" opacity="0.5"/>
+    </g>
+    <g transform="rotate(30 120 520)">
+      <rect x="120" y="504" width="6" height="64" rx="3" fill="#d6b24a"/>
+      <path d="M120 568 l3 8 l3 -8 z" fill="#191712"/>
+    </g>
+
+    <!-- desk plant left -->
+    <path d="M92 560 q-5 -28 -16 -36 M92 560 q0 -32 0 -42 M92 560 q5 -28 16 -36" stroke="#7a9a6d" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M80 560 h24 l-4 -24 h-16 z" fill="#1c2430"/>
+
+    <!-- faint dotted grid -->
+    <g fill="#8a8578" opacity="0.12">
+      <circle cx="300" cy="300" r="1.6"/><circle cx="300" cy="326" r="1.6"/><circle cx="300" cy="352" r="1.6"/><circle cx="300" cy="378" r="1.6"/><circle cx="300" cy="404" r="1.6"/><circle cx="326" cy="300" r="1.6"/><circle cx="326" cy="326" r="1.6"/><circle cx="326" cy="352" r="1.6"/><circle cx="326" cy="378" r="1.6"/><circle cx="326" cy="404" r="1.6"/><circle cx="352" cy="300" r="1.6"/><circle cx="352" cy="326" r="1.6"/><circle cx="352" cy="352" r="1.6"/><circle cx="352" cy="378" r="1.6"/><circle cx="352" cy="404" r="1.6"/><circle cx="378" cy="300" r="1.6"/><circle cx="378" cy="326" r="1.6"/><circle cx="378" cy="352" r="1.6"/><circle cx="378" cy="378" r="1.6"/><circle cx="378" cy="404" r="1.6"/><circle cx="404" cy="300" r="1.6"/><circle cx="404" cy="326" r="1.6"/><circle cx="404" cy="352" r="1.6"/><circle cx="404" cy="378" r="1.6"/><circle cx="404" cy="404" r="1.6"/><circle cx="430" cy="300" r="1.6"/><circle cx="430" cy="326" r="1.6"/><circle cx="430" cy="352" r="1.6"/><circle cx="430" cy="378" r="1.6"/><circle cx="430" cy="404" r="1.6"/>
+    </g>
+
+    <!-- wordmark bottom -->
+    <g transform="translate(40,748)">
+      <circle cx="12" cy="12" r="12" fill="#191712"/>
+      <circle cx="12" cy="12" r="6.8" fill="none" stroke="#f4f0e6" stroke-width="2.2"/>
+      <text x="34" y="18" font-size="18" fill="#191712" font-family="'Instrument Serif',Georgia,serif">Nexus LabSystems</text>
+    </g>
+    <text x="440" y="760" font-size="10.5" fill="#8a8578" text-anchor="end" font-family="'IBM Plex Mono',monospace" letter-spacing="1">DESIGN · BUILD · RANK</text>
+  </g>
+</svg>

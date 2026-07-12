@@ -4,6 +4,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
 import { SERVICES, WORK, BUILD_PLANS, HOME_FAQ } from "@/lib/site";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -35,7 +36,7 @@ export default function HomePage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] border hair sm:aspect-[4/5]" style={{ background: "linear-gradient(150deg,var(--ph-a),var(--ph-b))" }}>
             <div className="absolute inset-0 flex items-center justify-center font-mono text-[12px] tracking-[0.12em] text-muted4">
-              STUDIO IMAGE
+              <Image src='/nexus.svg' alt="Studio Image" height={700} width={500} />
             </div>
             <div className="absolute inset-x-5 bottom-5 rounded-[12px] bg-bg p-[18px] shadow-[0_10px_30px_rgba(0,0,0,0.14)]">
               <div className="mb-[6px] font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Free teardown</div>
@@ -88,9 +89,20 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-[22px] md:grid-cols-2">
           {WORK.map((w, i) => (
             <FadeIn key={w.slug} delay={i * 80}>
-              <Link href={`/work/${w.slug}`} className="block h-full overflow-hidden rounded-[13px] border text-ink no-underline hair">
-                <div className="flex aspect-[16/10] items-end p-[18px]" style={{ background: w.grad }}>
-                  <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-white/90">{w.tag}</span>
+              <Link
+                href={`/work/${w.slug}`}
+                className="group block h-full overflow-hidden rounded-[13px] border text-ink no-underline transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(var(--ink-rgb),0.16)] hair"
+              >
+                {/* overflow-hidden clips the zoom to the image frame, so only the
+                    image scales on hover — the tag label stays put. */}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[600ms] ease-out group-hover:scale-[1.05]"
+                    style={{ backgroundImage: `url('${w.img}')` }}
+                  />
+                  <span className="absolute bottom-[18px] left-[18px] font-mono text-[10.5px] uppercase tracking-[0.12em] text-white/90">
+                    {w.tag}
+                  </span>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-2 bg-card px-5 py-[18px]">
                   <span className="serif text-[21px]">{w.name}</span>
@@ -100,7 +112,7 @@ export default function HomePage() {
             </FadeIn>
           ))}
           <FadeIn delay={WORK.length * 80}>
-            <Link href="/work" className="flex h-full min-h-[120px] flex-col items-start justify-center gap-[10px] rounded-[13px] border border-dashed bg-panel p-6 text-ink no-underline sm:p-7" style={{ borderColor: "rgba(var(--ink-rgb),0.28)" }}>
+            <Link href="/work" className="flex h-full min-h-[120px] flex-col items-start justify-center gap-[10px] rounded-[13px] border border-dashed bg-panel p-6 text-ink no-underline transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(var(--ink-rgb),0.12)] sm:p-7" style={{ borderColor: "rgba(var(--ink-rgb),0.28)" }}>
               <span className="serif text-[24px]">See every project</span>
               <span className="text-[14px] text-muted2">Full case studies — the brief, the build, the results.</span>
               <span className="mt-1 text-[14px] font-semibold text-accent">Browse case studies →</span>
@@ -146,7 +158,7 @@ export default function HomePage() {
           </div>
           <FadeIn>
             <p className="mt-[26px] text-center text-[14px] text-muted2">
-              Keep it running with a care plan from <strong>£[PLACEHOLDER]/mo</strong> — hosting, updates, backups &amp; support.{" "}
+              Keep it running with a care plan from <strong>£39/mo</strong> — hosting, updates, backups &amp; support.{" "}
               <Link href="/pricing" className="font-medium">Full pricing →</Link>
             </p>
           </FadeIn>
@@ -157,7 +169,7 @@ export default function HomePage() {
       <section className="wrap grid grid-cols-1 items-center gap-10 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-[52px]">
         <FadeIn>
           <div className="flex aspect-square items-center justify-center rounded-[16px] border font-mono text-[12px] tracking-[0.12em] text-muted4 hair" style={{ background: "linear-gradient(150deg,var(--ph-a),var(--ph-c))" }}>
-            FOUNDER PHOTO
+            <Image src="/workspace.svg" alt="About our workspace" height={800} width={480} />
           </div>
         </FadeIn>
         <FadeIn delay={80}>
@@ -184,6 +196,11 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={80}>
             <FaqAccordion items={HOME_FAQ} />
+          </FadeIn>
+          <FadeIn className="mt-8 text-center">
+            <Link href="/faq" className="text-[14.5px] font-semibold text-accent">
+              See all FAQs →
+            </Link>
           </FadeIn>
         </div>
       </section>

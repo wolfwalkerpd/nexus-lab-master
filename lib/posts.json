@@ -1,0 +1,207 @@
+[
+  {
+    "slug": "why-customers-leave",
+    "category": "Websites",
+    "title": "Why local customers leave your website in 5 seconds",
+    "description": "The most common reasons visitors bounce — and the quick, unglamorous fixes that keep them reading, and booking.",
+    "author": "Mohammad Javad Samadi",
+    "authorBio": "Web Developer - Writes about technical conflict & solution in web",
+    "date": "june 2026",
+    "read": "6 min read",
+    "heroGrad": "linear-gradient(135deg,#B7472A,#8f3520)",
+    "image": "/website.jpg",
+    "intro": [
+      "You have about five seconds. That’s how long a visitor gives your website before they decide to stay or hit the back button and try the next result. For a local business, that decision is the difference between a booked job and a lost one — and most of the reasons people leave are completely fixable.",
+      "Here are the five we see most often in a teardown, and the unglamorous fixes that keep people reading."
+    ],
+    "reasons": [
+      { "heading": "1. It loads too slowly", "body": "Every extra second of load time costs you visitors — especially on mobile, on patchy signal, where most local searches happen. If your homepage takes four seconds to appear, a big chunk of people are already gone. Heavy images, bloated templates and cheap hosting are the usual culprits, and all three are fixable." },
+      { "heading": "2. It’s not clear what you do", "body": "A visitor should know what you offer, where you operate and who you help within a glance. Clever taglines and stock photography don’t do that job. A plain headline — “Emergency roof repairs across Nottingham, same week” — does. If someone has to scroll and hunt to understand you, they won’t." },
+      { "heading": "3. There’s no obvious next step", "body": "Once someone’s interested, tell them exactly what to do — book, call, or request a quote — and make that action impossible to miss. One clear, repeated call-to-action beats a page scattered with competing links every time." },
+      { "heading": "4. It doesn’t work on a phone", "body": "The majority of local searches happen on mobile. If your text is tiny, your buttons are hard to tap, or your booking form is a nightmare on a small screen, you’re turning away most of your audience. A site should be designed for the phone first, then scaled up." },
+      { "heading": "5. There’s nothing to build trust", "body": "People buy from businesses they trust. Reviews, real photos of your work, guarantees, accreditations and a genuine local address all quietly reassure a nervous first-time visitor. Leave them out and even a beautiful site feels risky." }
+    ],
+    "pullQuote": "If a visitor has to think about what to do next, you’ve already lost half of them.",
+    "pullQuoteAfter": 2,
+    "fixTitle": "How to fix it, fast",
+    "fixes": [
+      "Put a plain-English headline and a single clear call-to-action above the fold.",
+      "Compress your images and move to fast, modern hosting.",
+      "Test every page on your own phone — and fix what annoys you.",
+      "Add three to five recent reviews near your call-to-action."
+    ],
+    "closing": "None of these require a full rebuild — but together they can meaningfully change how many visitors turn into enquiries. If you’re not sure which apply to your site, that’s exactly what a teardown is for.",
+    "ctaHeading": "See which of these are costing you customers.",
+    "ctaSub": "Book a free teardown and we’ll record a walkthrough of your own site."
+  },
+  {
+    "slug": "local-map-pack-explained",
+    "category": "SEO",
+    "title": "The local map pack, explained",
+    "description": "What those top-three map results are, why they win the calls, and how to get in.",
+    "author": "Mohammad Javad Samadi",
+    "authorBio": "Web Developer - Writes about technical conflict & solution in web",
+    "date": "june 2026",
+    "read": "5 min read",
+    "heroGrad": "linear-gradient(135deg,#2FA8C4,#1E7E96)",
+    "image": "/map.jpg",
+    "intro": [
+      "Search for almost any local service — “plumber near me”, “dentist in Nottingham” — and before the normal results, Google shows a map with three businesses pinned to it. That box is the local map pack, and for local searches it quietly wins most of the clicks and calls.",
+      "Here’s what it is, why it matters so much, and the levers that actually move you into it."
+    ],
+    "reasons": [
+      { "heading": "What the map pack actually is", "body": "It’s the block of three local businesses Google shows with a map, star ratings and a phone number, right at the top of the results. It pulls from Google Business Profiles, not from your website directly — which is why a great website alone won’t put you there." },
+      { "heading": "Why it wins the calls", "body": "It sits above the normal blue links, it shows your rating and a call button, and on a phone it fills the first screen. For someone ready to book, it’s the path of least resistance — most never scroll past it." },
+      { "heading": "How Google decides who’s in it", "body": "Three things, roughly: relevance (does your profile match the search), distance (how close you are to the searcher) and prominence (reviews, activity and consistent information across the web). You can’t change distance, but relevance and prominence are firmly in your hands." },
+      { "heading": "How you get in", "body": "Claim and fully complete your Google Business Profile, pick the right categories, keep your name, address and phone identical everywhere, and earn a steady trickle of genuine reviews. Consistency and reviews are what tip close-but-not-quite businesses into the pack." }
+    ],
+    "pullQuote": "For a local search, the map pack is the shop window — and most of your competitors have left theirs half-empty.",
+    "pullQuoteAfter": 1,
+    "fixTitle": "The quick wins",
+    "fixes": [
+      "Claim your Google Business Profile and fill in every field.",
+      "Choose the most specific primary category you can.",
+      "Match your name, address and phone exactly across every listing.",
+      "Ask happy customers for a review while the job’s still fresh."
+    ],
+    "closing": "None of this is quick-fix magic — the map pack rewards consistency over months — but it’s the highest-leverage free marketing most local businesses are ignoring. If you’re not sure how your profile stacks up, that’s part of what a teardown checks.",
+    "ctaHeading": "Want to know why you’re not in the map pack?",
+    "ctaSub": "Book a free teardown and we’ll show you where your local visibility is leaking away."
+  },
+  {
+    "slug": "do-you-own-your-website",
+    "category": "Websites",
+    "title": "Do you really own your website?",
+    "description": "Three quick checks to make sure your site, domain and data are actually yours.",
+    "author": "Mohammad Javad Samadi",
+    "authorBio": "Web Developer - Writes about technical conflict & solution in web",
+    "date": "june 2026",
+    "read": "4 min read",
+    "heroGrad": "linear-gradient(135deg,#7A5AF0,#4A32B0)",
+    "image": "/website2.jpg",
+    "intro": [
+      "It sounds like an odd question — you paid for your website, so of course it’s yours. But a surprising number of small businesses find out the hard way that their domain, their site or their data is locked to an agency they’ve outgrown.",
+      "Three quick checks tell you whether you’re actually in control."
+    ],
+    "reasons": [
+      { "heading": "1. Is the domain in your name?", "body": "Your domain (yourbusiness.co.uk) should be registered to you, with you as the registrant and admin contact — not your web designer. If it’s sitting in someone else’s account, they, not you, control your web address and often your email with it." },
+      { "heading": "2. Can you reach the hosting and files?", "body": "You should have login access to wherever the site lives, and the ability to take a full copy of it. If moving to a new developer means rebuilding from scratch because no one will hand over the files, you don’t really own the site." },
+      { "heading": "3. Do you control your content and data?", "body": "Your text, images and — especially — your enquiry and customer data should be exportable and yours. A site that traps your content in a system you can’t leave is a rental, not a purchase." }
+    ],
+    "pullQuote": "If leaving your web company means starting over, you were renting your website all along.",
+    "pullQuoteAfter": 2,
+    "fixTitle": "Your ownership checklist",
+    "fixes": [
+      "Confirm the domain registrant is you, in an account you can log into.",
+      "Make sure you can access hosting and download a full backup.",
+      "Check you can export your content and enquiry data any time.",
+      "Get every login in writing, in your name, before you need them."
+    ],
+    "closing": "Owning your website outright isn’t a nice-to-have — it’s leverage. It means you can move, improve or negotiate without anything held hostage. Every site we build is yours completely, but it’s worth checking the one you have now.",
+    "ctaHeading": "Not sure what you actually own?",
+    "ctaSub": "Book a free teardown and we’ll check your domain, hosting and data — no obligation."
+  },
+  {
+    "slug": "trades-website-essentials",
+    "category": "Local marketing",
+    "title": "5 things every trades website needs",
+    "description": "The essentials that turn a phone-in-hand visitor into a quote request.",
+    "author": "Mohammad Javad Samadi",
+    "authorBio": "Web Developer - Writes about technical conflict & solution in web",
+    "date": "june 2026",
+    "read": "5 min read",
+    "heroGrad": "linear-gradient(135deg,#E5892B,#B4610F)",
+    "image": "/trading.jpg",
+    "intro": [
+      "Most people looking for a roofer, electrician or builder are on their phone, mid-problem, and ready to call the first business that looks capable and trustworthy. A trades website has one job: turn that visitor into a quote request before they bounce to a competitor.",
+      "Five things do most of that heavy lifting."
+    ],
+    "reasons": [
+      { "heading": "1. Click-to-call, everywhere", "body": "On a phone, your number should be one tap away on every screen — a sticky call button, not something buried on a contact page. Most trades enquiries are phone calls, so make calling effortless." },
+      { "heading": "2. Real photos of your work", "body": "Stock images fool no one. Before-and-after photos of actual jobs prove you can do the work and quietly justify your price. They’re the single most persuasive thing on a trades site." },
+      { "heading": "3. A dead-simple quote request", "body": "A short form — name, number, what they need, maybe a photo — captures the people who won’t call. The fewer fields, the more you’ll get. Every extra box loses you leads." },
+      { "heading": "4. Service-area pages", "body": "Pages for each town you cover help you show up when someone searches “roofer in [town]”. They tell both Google and the customer that you actually work where they are." },
+      { "heading": "5. Trust signals up front", "body": "Reviews, guarantees, insurance, accreditations and years in business reassure a nervous first-timer. Put them near your call-to-action, where the decision actually happens." }
+    ],
+    "pullQuote": "Someone with a leaking roof isn’t reading your ‘about’ page — they’re looking for a reason to call you right now.",
+    "pullQuoteAfter": 2,
+    "fixTitle": "The trades checklist",
+    "fixes": [
+      "Add a tap-to-call button that follows the screen on mobile.",
+      "Swap stock photos for real before-and-after job shots.",
+      "Cut your quote form down to the fewest possible fields.",
+      "Put reviews and guarantees right beside your main call-to-action."
+    ],
+    "closing": "You don’t need a huge site — you need the few things that turn urgency into a phone call. Get these five right and a modest trades website will out-earn a flashy one that ignores them.",
+    "ctaHeading": "Is your trades site winning the calls?",
+    "ctaSub": "Book a free teardown and we’ll show you where quote requests are slipping through."
+  },
+  {
+    "slug": "google-business-profile-tool",
+    "category": "SEO",
+    "title": "The free Google tool most businesses ignore",
+    "description": "Your Google Business Profile is free, powerful, and usually half-empty. Let’s fix that.",
+    "author": "Mohammad Javad Samadi",
+    "authorBio": "Web Developer - Writes about technical conflict & solution in web",
+    "date": "june 2026",
+    "read": "6 min read",
+    "heroGrad": "linear-gradient(135deg,#2E7D5B,#1c5540)",
+    "image": "/google.jpg",
+    "intro": [
+      "There’s a free Google tool that decides whether you show up when a nearby customer searches, puts your phone number and reviews front and centre, and sends you clicks and calls without costing a penny. Most businesses claim it, half-fill it, and never touch it again.",
+      "It’s your Google Business Profile — and it’s probably your most under-used marketing asset."
+    ],
+    "reasons": [
+      { "heading": "What it is", "body": "It’s the business listing that appears on Google Search and Maps — your name, hours, photos, reviews, services and a call button. It’s free, and it’s often the first thing a local customer sees about you, before your website." },
+      { "heading": "Why it matters more than you think", "body": "For local searches, the profile feeds the map pack and answers the customer’s question — open now? close by? well-reviewed? — before they ever click through. A strong profile earns calls on its own." },
+      { "heading": "What most people miss", "body": "Thin descriptions, one blurry photo, missing services, no posts and unanswered reviews. Google rewards complete, active profiles and customers trust them more, so an abandoned listing quietly costs you both." },
+      { "heading": "How to make it earn its keep", "body": "Fill in every field, add real photos regularly, list your services, reply to every review, and post the odd update or offer. Treat it like a live shopfront, not a set-and-forget directory entry." }
+    ],
+    "pullQuote": "Your Google Business Profile is doing marketing for you whether you tend it or not — the only question is how well.",
+    "pullQuoteAfter": 1,
+    "fixTitle": "Give it an hour this week",
+    "fixes": [
+      "Complete every field, especially services and the description.",
+      "Add a handful of real, recent photos.",
+      "Reply to every review — good and bad.",
+      "Post an update or offer to show the profile’s active."
+    ],
+    "closing": "None of this needs a budget — just an hour and a bit of consistency. It’s the rare piece of marketing that’s free, fast and genuinely moves the needle for local businesses.",
+    "ctaHeading": "Is your profile pulling its weight?",
+    "ctaSub": "Book a free teardown and we’ll review your Google Business Profile alongside your site."
+  },
+  {
+    "slug": "fixed-price-vs-hourly",
+    "category": "Business",
+    "title": "Fixed price vs hourly: why we quote up front",
+    "description": "Why open-ended invoices hurt small businesses — and how fixed pricing protects you.",
+    "author": "Mohammad Javad Samadi",
+    "authorBio": "Web Developer - Writes about technical conflict & solution in web",
+    "date": "june 2026",
+    "read": "4 min read",
+    "heroGrad": "linear-gradient(135deg,#C64B3B,#8F2E22)",
+    "image": "/money-time.jpg",
+    "intro": [
+      "Ask most agencies what a website costs and you’ll get a day rate and a shrug. That’s convenient for them and stressful for you — the final bill is a mystery until it lands. We quote a fixed price up front instead, and it changes the whole relationship.",
+      "Here’s why open-ended billing hurts small businesses, and what fixed pricing does differently."
+    ],
+    "reasons": [
+      { "heading": "The problem with hourly", "body": "Hourly billing makes you pay for our learning curve, our mistakes and every “quick change”. It punishes you for asking questions and makes budgeting impossible — you can’t plan around a number nobody will commit to." },
+      { "heading": "What fixed price changes", "body": "We carry the risk of things taking longer, not you. You know the exact number before we start, so you can say yes with total clarity — and we’re motivated to work efficiently, not to run up hours." },
+      { "heading": "How we land on the number", "body": "We scope the project properly first — pages, features, content and goals — and price that. If the scope genuinely changes later, we agree any difference openly, up front, never as a surprise on the invoice." },
+      { "heading": "What you actually get", "body": "A clear proposal, a fixed cost and a defined outcome. No creeping invoices, no awkward end-of-month conversations — just the site we agreed, for the price we agreed." }
+    ],
+    "pullQuote": "You shouldn’t need to watch the clock to afford a website — the price should be a decision, not a gamble.",
+    "pullQuoteAfter": 1,
+    "fixTitle": "What to ask any web company",
+    "fixes": [
+      "Is this a fixed price, or an estimate that can grow?",
+      "What exactly is included at that price?",
+      "What happens to the cost if the scope changes?",
+      "Do I own everything when it’s finished?"
+    ],
+    "closing": "Fixed pricing isn’t just tidier — it’s fairer. It puts the risk where it belongs and lets you invest in your website as a known cost, not an open tab. That clarity is the whole point.",
+    "ctaHeading": "Want a real number for your project?",
+    "ctaSub": "Book a free teardown and you’ll get a fixed, honest quote — no obligation to go ahead."
+  }
+]

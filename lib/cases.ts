@@ -4,7 +4,9 @@ export type CaseStudy = {
   tags: string[];
   title: string;
   intro: string;
-  hue: string;
+  img: string;
+  /** Live site you built — the "Visit" button links here. Leave "" to hide it. */
+  url: string;
   metrics: [string, string][];
   briefTitle: string;
   brief: string[];
@@ -24,8 +26,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ["Dental", "Website design", "Local SEO"],
     title: "A dental practice that books itself out.",
     intro: "Bright Smile Dental had great care and a website that hid it. We rebuilt the site around booking and put them on the map for local searches.",
-    hue: "linear-gradient(135deg,#2FA8C4,#1E7E96)",
-    metrics: [["[+X%]", "online bookings"], ["[#X]", '"dentist near me"'], ["[+X%]", "new patients / mo"], ["[X wks]", "to launch"]],
+    img: "/image.png",
+    url: "https://brightsmiledental.co.uk",
+    metrics: [["[+1%]", "online bookings"], ["[#1]", '"dentist near me"'], ["[+1%]", "new patients / mo"], ["[1 wks]", "to launch"]],
     briefTitle: "The brief",
     brief: ["The practice was busy on reputation alone, but their website was an old template that buried the important things — and had no way to book online. New patients called during the day or not at all, and they were nowhere to be found for local searches.", "They wanted a site that looked as premium as their care, took bookings around the clock, and actually showed up on Google."],
     approach: ["We started with a teardown of their site and their top local competitors. That shaped a rebuild focused on one job: turning visitors into booked appointments.", "Clear treatment pages, prominent online booking, trust signals up front, and a local SEO push targeting the searches their future patients actually make."],
@@ -41,8 +44,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ["Trades", "Website design", "Branding"],
     title: "The roofer the whole town calls first.",
     intro: "Apex Roofing did excellent work and looked like everyone else. A new brand and a website built for quotes made them the obvious choice across their patch.",
-    hue: "linear-gradient(135deg,#E5892B,#B4610F)",
-    metrics: [["[+X%]", "quote requests"], ["[X]", "towns ranked"], ["[-X%]", "cost per lead"], ["[X wks]", "to launch"]],
+    img: "/image2.png",
+    url: "https://apexroofing.co.uk",
+    metrics: [["[+1%]", "quote requests"], ["[1]", "towns ranked"], ["[-1%]", "cost per lead"], ["[1 wks]", "to launch"]],
     briefTitle: "The brief",
     brief: ["Apex lived on word of mouth. Their old site was a single dated page with a phone number, no photos of their work and nothing to make them stand out from a dozen local rivals.", "They wanted to look established, show the quality of their work, and get quote requests coming in without chasing."],
     approach: ["We created a confident new brand, then built a site around a single action: request a quote. Real photos of their work do the selling; the forms do the capturing.", "Service-area pages target every town they cover, so they rank wherever a customer is searching."],
@@ -58,8 +62,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ["Hospitality", "Website design", "Bookings"],
     title: "Booked out, even midweek.",
     intro: "The Copper Kitchen lived on walk-ins and a PDF menu. A new site with live menus and online booking turned quiet Tuesdays into full ones.",
-    hue: "linear-gradient(135deg,#C64B3B,#8F2E22)",
-    metrics: [["[+X%]", "online bookings"], ["[+X%]", "midweek covers"], ["[+X%]", "repeat bookings"], ["[X wks]", "to launch"]],
+    img: "/image1.png",
+    url: "https://thecopperkitchen.co.uk",
+    metrics: [["[+1%]", "online bookings"], ["[+1%]", "midweek covers"], ["[+1%]", "repeat bookings"], ["[1 wks]", "to launch"]],
     briefTitle: "The brief",
     brief: ["Great food, loyal regulars — but a website that was little more than a downloadable PDF menu and a phone number. Booking meant calling during service, and midweek tables sat empty.", "They wanted online booking, menus they could update themselves, and a way to promote quiet nights."],
     approach: ["We built a warm, appetising site with booking front and centre, and a live menu the team edits from their phones — no more out-of-date PDFs.", "Events and midweek offers get their own space, so there's always a reason to book."],

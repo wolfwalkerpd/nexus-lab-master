@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" font-family="'Work Sans',system-ui,sans-serif">
+  <defs><filter id="sh" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#191712" flood-opacity="0.18"/></filter></defs>
+  <g filter="url(#sh)">
+    <rect x="10" y="10" width="540" height="400" rx="14" fill="#fbf9f3" stroke="#1917121a"/>
+    <rect x="10" y="10" width="540" height="40" rx="14" fill="#ede7d8"/>
+    <rect x="10" y="34" width="540" height="16" fill="#ede7d8"/>
+    <circle cx="34" cy="30" r="5.5" fill="#b7472a"/><circle cx="52" cy="30" r="5.5" fill="#d6b24a"/><circle cx="70" cy="30" r="5.5" fill="#7a9a6d"/>
+    <rect x="92" y="21" width="420" height="18" rx="9" fill="#fbf9f3"/>
+    <text x="106" y="34" font-size="11" fill="#8a8578" font-family="'IBM Plex Mono',monospace">trade-business.co.uk</text>
+  </g>
+  <clipPath id="page"><rect x="10" y="50" width="540" height="360"/></clipPath>
+  <g clip-path="url(#page)">
+
+  <rect x="10" y="50" width="540" height="360" fill="#fbf9f3"/>
+  <rect x="10" y="50" width="540" height="200" fill="#1c2630"/>
+  <rect x="34" y="66" width="24" height="24" rx="5" fill="#b7472a"/>
+  <rect x="66" y="72" width="80" height="11" rx="5.5" fill="#fff" opacity="0.9"/>
+  <rect x="340" y="73" width="34" height="7" rx="3.5" fill="#c9c4b8"/><rect x="384" y="73" width="26" height="7" rx="3.5" fill="#c9c4b8"/>
+  <rect x="452" y="70" width="84" height="20" rx="10" fill="#b7472a"/><text x="494" y="83" font-size="8.5" fill="#fff" text-anchor="middle" font-weight="700">☎ Call us</text>
+  <rect x="34" y="112" width="90" height="8" rx="4" fill="#b7472a"/>
+  <rect x="34" y="132" width="200" height="21" rx="5" fill="#fff"/>
+  <rect x="34" y="162" width="150" height="21" rx="5" fill="#fff"/>
+  <rect x="34" y="202" width="220" height="7" rx="3.5" fill="#ffffff" opacity="0.5"/>
+  <rect x="34" y="216" width="180" height="7" rx="3.5" fill="#ffffff" opacity="0.5"/>
+  <polygon points="360,180 440,120 520,180" fill="#b7472a"/><rect x="378" y="180" width="124" height="50" fill="#3a4655"/><rect x="410" y="200" width="24" height="30" fill="#1c2630"/>
+  <rect x="34" y="272" width="150" height="36" rx="18" fill="#b7472a"/><text x="109" y="295" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">Get a free quote</text>
+  <rect x="200" y="272" width="110" height="36" rx="18" fill="none" stroke="#19171230"/><text x="255" y="295" font-size="10" fill="#191712" text-anchor="middle" font-weight="600">Call us</text>
+  <rect x="34" y="326" width="150" height="60" rx="10" fill="#ede7d8"/><rect x="50" y="340" width="60" height="16" rx="4" fill="#b7472a"/><rect x="50" y="364" width="100" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+  <rect x="200" y="326" width="150" height="60" rx="10" fill="#ede7d8"/><rect x="216" y="340" width="66" height="16" rx="4" fill="#1c2630"/><rect x="216" y="364" width="100" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+  <rect x="366" y="326" width="160" height="60" rx="10" fill="#ede7d8"/><rect x="382" y="340" width="90" height="16" rx="4" fill="#1c2630"/><rect x="382" y="364" width="110" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+
+  </g>
+</svg>

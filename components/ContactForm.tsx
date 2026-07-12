@@ -29,6 +29,10 @@ export default function ContactForm() {
   const [data, setData] = useState<Data>({ name: "", email: "", business: "", url: "", about: "", source: "" });
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  // Honeypot: hidden from real users; if a bot fills it, the server drops it.
+  const [company, setCompany] = useState("");
   const inputRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
 
   const cfg = STEPS[step];
@@ -43,13 +47,34 @@ export default function ContactForm() {
     return "";
   };
 
+  const submit = async () => {
+    if (submitting) return;
+    setSubmitting(true);
+    setSubmitError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, company }),
+      });
+      if (!res.ok) {
+        const b = await res.json().catch(() => ({}));
+        throw new Error(b?.error || "Something went wrong. Please try again.");
+      }
+      setDone(true);
+    } catch (e) {
+      setSubmitError(e instanceof Error ? e.message : "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   const next = () => {
     const err = validate();
     if (err) return setError(err);
     setError("");
     if (step >= total - 1) {
-      // [backend placeholder] — POST `data` to your server / CRM here.
-      setDone(true);
+      submit();
     } else {
       setStep((s) => s + 1);
       setTimeout(() => inputRef.current?.focus(), 40);
@@ -82,9 +107,6 @@ export default function ContactForm() {
             Back to home
           </Link>
           <Link href="/work" className="btn-ghost w-full sm:w-auto">See our work while you wait</Link>
-        </div>
-        <div className="mt-7 font-mono text-[11px] text-muted4">
-          [backend placeholder — submissions are not wired to a server in this prototype]
         </div>
       </div>
     );
@@ -152,18 +174,33 @@ export default function ContactForm() {
 
           {cfg.optional && <div className="mt-3 text-[13px] text-muted3">Optional — feel free to skip.</div>}
           {error && <div className="mt-3 text-[13.5px] text-accent">{error}</div>}
+          {submitError && <div className="mt-3 text-[13.5px] text-accent">{submitError}</div>}
+        </div>
+
+        {/* Honeypot — visually hidden, ignored by humans, tempting to bots. */}
+        <div aria-hidden className="pointer-events-none absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0">
+          <label>
+            Company
+            <input
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+            />
+          </label>
         </div>
 
         <div className="mt-8 flex items-center justify-between gap-[14px]">
           {step > 0 ? (
-            <button onClick={back} className="min-h-[44px] cursor-pointer border-none bg-transparent px-1 py-2 text-[15px] text-muted2">
+            <button onClick={back} disabled={submitting} className="min-h-[44px] cursor-pointer border-none bg-transparent px-1 py-2 text-[15px] text-muted2 disabled:opacity-50">
               ← Back
             </button>
           ) : (
             <span />
           )}
-          <button onClick={next} className="btn-primary btn-lg cursor-pointer border-none">
-            {step === total - 1 ? "Finish" : "Next"} →
+          <button onClick={next} disabled={submitting} className="btn-primary btn-lg cursor-pointer border-none disabled:cursor-not-allowed disabled:opacity-60">
+            {submitting ? "Sending…" : `${step === total - 1 ? "Finish" : "Next"} →`}
           </button>
         </div>
       </div>

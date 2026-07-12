@@ -1,8 +1,10 @@
+import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
 import { ABOUT_FAQ } from "@/lib/site";
 import { Metadata } from "next";
+import Image from "next/image";
 
 
 export const metadata: Metadata = {
@@ -48,7 +50,7 @@ export default function AboutPage() {
       <section className="wrap grid grid-cols-1 items-center gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-[52px]">
         <FadeIn>
           <div className="flex aspect-square items-center justify-center rounded-[16px] border font-mono text-[12px] tracking-[0.12em] text-muted4 hair" style={{ background: "linear-gradient(150deg,var(--ph-a),var(--ph-c))" }}>
-            FOUNDER / TEAM PHOTO
+            <Image src="/about.svg" alt="About our workspace" height={550} width={480} />
           </div>
         </FadeIn>
         <FadeIn delay={80}>
@@ -102,6 +104,11 @@ export default function AboutPage() {
           </FadeIn>
           <FadeIn delay={80}>
             <FaqAccordion items={ABOUT_FAQ} />
+          </FadeIn>
+          <FadeIn className="mt-8 text-center">
+            <Link href="/faq" className="text-[14.5px] font-semibold text-accent">
+              See all FAQs →
+            </Link>
           </FadeIn>
         </div>
       </section>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="500" height="700" font-family="'Work Sans',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f0e6"/><stop offset="1" stop-color="#ede7d8"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#232d3b"/><stop offset="1" stop-color="#1c2430"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#191712" flood-opacity="0.16"/>
+    </filter>
+    <filter id="soft2" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#191712" flood-opacity="0.16"/>
+    </filter>
+    <clipPath id="round"><rect width="500" height="700" rx="18"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="500" height="700" fill="url(#sky)"/>
+
+    <!-- blueprint dot grid -->
+    <g fill="#8a8578" opacity="0.15">
+      <circle cx="30" cy="30" r="1.8"/><circle cx="30" cy="72" r="1.8"/><circle cx="30" cy="114" r="1.8"/><circle cx="30" cy="156" r="1.8"/><circle cx="30" cy="198" r="1.8"/><circle cx="30" cy="240" r="1.8"/><circle cx="30" cy="282" r="1.8"/><circle cx="30" cy="324" r="1.8"/><circle cx="30" cy="366" r="1.8"/><circle cx="30" cy="408" r="1.8"/><circle cx="30" cy="450" r="1.8"/><circle cx="30" cy="492" r="1.8"/><circle cx="30" cy="534" r="1.8"/><circle cx="30" cy="576" r="1.8"/><circle cx="30" cy="618" r="1.8"/><circle cx="30" cy="660" r="1.8"/><circle cx="72" cy="30" r="1.8"/><circle cx="72" cy="72" r="1.8"/><circle cx="72" cy="114" r="1.8"/><circle cx="72" cy="156" r="1.8"/><circle cx="72" cy="198" r="1.8"/><circle cx="72" cy="240" r="1.8"/><circle cx="72" cy="282" r="1.8"/><circle cx="72" cy="324" r="1.8"/><circle cx="72" cy="366" r="1.8"/><circle cx="72" cy="408" r="1.8"/><circle cx="72" cy="450" r="1.8"/><circle cx="72" cy="492" r="1.8"/><circle cx="72" cy="534" r="1.8"/><circle cx="72" cy="576" r="1.8"/><circle cx="72" cy="618" r="1.8"/><circle cx="72" cy="660" r="1.8"/><circle cx="114" cy="30" r="1.8"/><circle cx="114" cy="72" r="1.8"/><circle cx="114" cy="114" r="1.8"/><circle cx="114" cy="156" r="1.8"/><circle cx="114" cy="198" r="1.8"/><circle cx="114" cy="240" r="1.8"/><circle cx="114" cy="282" r="1.8"/><circle cx="114" cy="324" r="1.8"/><circle cx="114" cy="366" r="1.8"/><circle cx="114" cy="408" r="1.8"/><circle cx="114" cy="450" r="1.8"/><circle cx="114" cy="492" r="1.8"/><circle cx="114" cy="534" r="1.8"/><circle cx="114" cy="576" r="1.8"/><circle cx="114" cy="618" r="1.8"/><circle cx="114" cy="660" r="1.8"/><circle cx="156" cy="30" r="1.8"/><circle cx="156" cy="72" r="1.8"/><circle cx="156" cy="114" r="1.8"/><circle cx="156" cy="156" r="1.8"/><circle cx="156" cy="198" r="1.8"/><circle cx="156" cy="240" r="1.8"/><circle cx="156" cy="282" r="1.8"/><circle cx="156" cy="324" r="1.8"/><circle cx="156" cy="366" r="1.8"/><circle cx="156" cy="408" r="1.8"/><circle cx="156" cy="450" r="1.8"/><circle cx="156" cy="492" r="1.8"/><circle cx="156" cy="534" r="1.8"/><circle cx="156" cy="576" r="1.8"/><circle cx="156" cy="618" r="1.8"/><circle cx="156" cy="660" r="1.8"/><circle cx="198" cy="30" r="1.8"/><circle cx="198" cy="72" r="1.8"/><circle cx="198" cy="114" r="1.8"/><circle cx="198" cy="156" r="1.8"/><circle cx="198" cy="198" r="1.8"/><circle cx="198" cy="240" r="1.8"/><circle cx="198" cy="282" r="1.8"/><circle cx="198" cy="324" r="1.8"/><circle cx="198" cy="366" r="1.8"/><circle cx="198" cy="408" r="1.8"/><circle cx="198" cy="450" r="1.8"/><circle cx="198" cy="492" r="1.8"/><circle cx="198" cy="534" r="1.8"/><circle cx="198" cy="576" r="1.8"/><circle cx="198" cy="618" r="1.8"/><circle cx="198" cy="660" r="1.8"/><circle cx="240" cy="30" r="1.8"/><circle cx="240" cy="72" r="1.8"/><circle cx="240" cy="114" r="1.8"/><circle cx="240" cy="156" r="1.8"/><circle cx="240" cy="198" r="1.8"/><circle cx="240" cy="240" r="1.8"/><circle cx="240" cy="282" r="1.8"/><circle cx="240" cy="324" r="1.8"/><circle cx="240" cy="366" r="1.8"/><circle cx="240" cy="408" r="1.8"/><circle cx="240" cy="450" r="1.8"/><circle cx="240" cy="492" r="1.8"/><circle cx="240" cy="534" r="1.8"/><circle cx="240" cy="576" r="1.8"/><circle cx="240" cy="618" r="1.8"/><circle cx="240" cy="660" r="1.8"/><circle cx="282" cy="30" r="1.8"/><circle cx="282" cy="72" r="1.8"/><circle cx="282" cy="114" r="1.8"/><circle cx="282" cy="156" r="1.8"/><circle cx="282" cy="198" r="1.8"/><circle cx="282" cy="240" r="1.8"/><circle cx="282" cy="282" r="1.8"/><circle cx="282" cy="324" r="1.8"/><circle cx="282" cy="366" r="1.8"/><circle cx="282" cy="408" r="1.8"/><circle cx="282" cy="450" r="1.8"/><circle cx="282" cy="492" r="1.8"/><circle cx="282" cy="534" r="1.8"/><circle cx="282" cy="576" r="1.8"/><circle cx="282" cy="618" r="1.8"/><circle cx="282" cy="660" r="1.8"/><circle cx="324" cy="30" r="1.8"/><circle cx="324" cy="72" r="1.8"/><circle cx="324" cy="114" r="1.8"/><circle cx="324" cy="156" r="1.8"/><circle cx="324" cy="198" r="1.8"/><circle cx="324" cy="240" r="1.8"/><circle cx="324" cy="282" r="1.8"/><circle cx="324" cy="324" r="1.8"/><circle cx="324" cy="366" r="1.8"/><circle cx="324" cy="408" r="1.8"/><circle cx="324" cy="450" r="1.8"/><circle cx="324" cy="492" r="1.8"/><circle cx="324" cy="534" r="1.8"/><circle cx="324" cy="576" r="1.8"/><circle cx="324" cy="618" r="1.8"/><circle cx="324" cy="660" r="1.8"/><circle cx="366" cy="30" r="1.8"/><circle cx="366" cy="72" r="1.8"/><circle cx="366" cy="114" r="1.8"/><circle cx="366" cy="156" r="1.8"/><circle cx="366" cy="198" r="1.8"/><circle cx="366" cy="240" r="1.8"/><circle cx="366" cy="282" r="1.8"/><circle cx="366" cy="324" r="1.8"/><circle cx="366" cy="366" r="1.8"/><circle cx="366" cy="408" r="1.8"/><circle cx="366" cy="450" r="1.8"/><circle cx="366" cy="492" r="1.8"/><circle cx="366" cy="534" r="1.8"/><circle cx="366" cy="576" r="1.8"/><circle cx="366" cy="618" r="1.8"/><circle cx="366" cy="660" r="1.8"/><circle cx="408" cy="30" r="1.8"/><circle cx="408" cy="72" r="1.8"/><circle cx="408" cy="114" r="1.8"/><circle cx="408" cy="156" r="1.8"/><circle cx="408" cy="198" r="1.8"/><circle cx="408" cy="240" r="1.8"/><circle cx="408" cy="282" r="1.8"/><circle cx="408" cy="324" r="1.8"/><circle cx="408" cy="366" r="1.8"/><circle cx="408" cy="408" r="1.8"/><circle cx="408" cy="450" r="1.8"/><circle cx="408" cy="492" r="1.8"/><circle cx="408" cy="534" r="1.8"/><circle cx="408" cy="576" r="1.8"/><circle cx="408" cy="618" r="1.8"/><circle cx="408" cy="660" r="1.8"/><circle cx="450" cy="30" r="1.8"/><circle cx="450" cy="72" r="1.8"/><circle cx="450" cy="114" r="1.8"/><circle cx="450" cy="156" r="1.8"/><circle cx="450" cy="198" r="1.8"/><circle cx="450" cy="240" r="1.8"/><circle cx="450" cy="282" r="1.8"/><circle cx="450" cy="324" r="1.8"/><circle cx="450" cy="366" r="1.8"/><circle cx="450" cy="408" r="1.8"/><circle cx="450" cy="450" r="1.8"/><circle cx="450" cy="492" r="1.8"/><circle cx="450" cy="534" r="1.8"/><circle cx="450" cy="576" r="1.8"/><circle cx="450" cy="618" r="1.8"/><circle cx="450" cy="660" r="1.8"/><circle cx="492" cy="30" r="1.8"/><circle cx="492" cy="72" r="1.8"/><circle cx="492" cy="114" r="1.8"/><circle cx="492" cy="156" r="1.8"/><circle cx="492" cy="198" r="1.8"/><circle cx="492" cy="240" r="1.8"/><circle cx="492" cy="282" r="1.8"/><circle cx="492" cy="324" r="1.8"/><circle cx="492" cy="366" r="1.8"/><circle cx="492" cy="408" r="1.8"/><circle cx="492" cy="450" r="1.8"/><circle cx="492" cy="492" r="1.8"/><circle cx="492" cy="534" r="1.8"/><circle cx="492" cy="576" r="1.8"/><circle cx="492" cy="618" r="1.8"/><circle cx="492" cy="660" r="1.8"/>
+    </g>
+
+    <!-- accent rings echoing the Nexus mark -->
+    <circle cx="430" cy="90" r="90" fill="none" stroke="#b7472a" stroke-width="2.5" opacity="0.30"/>
+    <circle cx="430" cy="90" r="58" fill="none" stroke="#b7472a" stroke-width="2.5" opacity="0.22"/>
+
+    <!-- MAIN browser window (portrait) -->
+    <g filter="url(#soft)">
+      <rect x="46" y="120" width="380" height="360" rx="16" fill="#fbf9f3" stroke="#1917121a"/>
+      <rect x="46" y="120" width="380" height="42" rx="16" fill="#ede7d8"/>
+      <rect x="46" y="146" width="380" height="16" fill="#ede7d8"/>
+      <circle cx="72" cy="141" r="5.5" fill="#b7472a"/><circle cx="92" cy="141" r="5.5" fill="#d6b24a"/><circle cx="112" cy="141" r="5.5" fill="#7a9a6d"/>
+      <rect x="150" y="132" width="230" height="18" rx="9" fill="#fbf9f3"/>
+      <text x="166" y="145" font-size="10.5" fill="#8a8578" font-family="'IBM Plex Mono',monospace">nexuslabsystems.com</text>
+
+      <!-- hero content -->
+      <rect x="78" y="192" width="120" height="12" rx="6" fill="#b7472a" opacity="0.9"/>
+      <rect x="78" y="218" width="250" height="22" rx="6" fill="#191712"/>
+      <rect x="78" y="248" width="200" height="22" rx="6" fill="#191712"/>
+      <rect x="78" y="286" width="300" height="9" rx="4.5" fill="#8a8578" opacity="0.6"/>
+      <rect x="78" y="302" width="260" height="9" rx="4.5" fill="#8a8578" opacity="0.6"/>
+      <rect x="78" y="330" width="140" height="38" rx="19" fill="#b7472a"/>
+      <text x="148" y="354" font-size="12.5" fill="#fff" text-anchor="middle" font-weight="600">Book a teardown</text>
+
+      <!-- service cards row -->
+      <rect x="78" y="392" width="106" height="70" rx="9" fill="#ede7d8"/>
+      <rect x="96" y="410" width="30" height="30" rx="7" fill="#1c2430"/>
+      <rect x="96" y="448" width="70" height="7" rx="3.5" fill="#8a8578" opacity="0.7"/>
+      <rect x="196" y="392" width="106" height="70" rx="9" fill="#ede7d8"/>
+      <rect x="214" y="410" width="30" height="30" rx="7" fill="#b7472a"/>
+      <rect x="214" y="448" width="70" height="7" rx="3.5" fill="#8a8578" opacity="0.7"/>
+      <rect x="314" y="392" width="94" height="70" rx="9" fill="#ede7d8"/>
+      <rect x="332" y="410" width="30" height="30" rx="7" fill="#1c2430"/>
+      <rect x="332" y="448" width="60" height="7" rx="3.5" fill="#8a8578" opacity="0.7"/>
+    </g>
+
+    <!-- floating code panel (overlaps middle of browser) -->
+    <g filter="url(#soft2)" transform="translate(0,-220)">
+      <rect x="150" y="470" width="300" height="180" rx="13" fill="url(#screen)"/>
+      <rect x="150" y="470" width="300" height="30" rx="13" fill="#2b3646"/>
+      <rect x="150" y="490" width="300" height="10" fill="#2b3646"/>
+      <circle cx="170" cy="485" r="4.5" fill="#b7472a"/><circle cx="186" cy="485" r="4.5" fill="#d6b24a"/><circle cx="202" cy="485" r="4.5" fill="#7a9a6d"/>
+      <g font-family="'IBM Plex Mono',monospace" font-size="11.5">
+        <text x="168" y="528" fill="#7a9a6d">&lt;section</text><text x="240" y="528" fill="#d6b24a"> class</text><text x="284" y="528" fill="#c9c4b8">="hero"&gt;</text>
+        <text x="184" y="550" fill="#c9c4b8">&lt;h1&gt;</text><text x="220" y="550" fill="#b7472a">Websites that</text>
+        <text x="200" y="572" fill="#b7472a">win customers</text>
+        <text x="184" y="594" fill="#c9c4b8">&lt;/h1&gt;</text>
+        <text x="184" y="616" fill="#6b7686">// one person,</text>
+        <text x="184" y="636" fill="#6b7686">// start → end</text>
+      </g>
+      <g transform="translate(392,600)">
+        <path d="M0 0 L0 20 L5.5 14.5 L10 24 L12.5 22 L8 13.5 L15.5 13.5 Z" fill="#f4f0e6" stroke="#1c2430" stroke-width="1.4"/>
+      </g>
+    </g>
+
+    <!-- color-token chip top-left -->
+    <g filter="url(#soft2)">
+      <rect x="40" y="52" width="132" height="50" rx="11" fill="#fbf9f3"/>
+      <circle cx="66" cy="77" r="11" fill="#1c2430"/><circle cx="92" cy="77" r="11" fill="#b7472a"/><circle cx="118" cy="77" r="11" fill="#d6b24a"/><circle cx="144" cy="77" r="11" fill="#ede7d8" stroke="#19171220"/>
+    </g>
+
+    <!-- wordmark bottom-left -->
+    <g transform="translate(46,672)">
+      <circle cx="12" cy="12" r="12" fill="#191712"/>
+      <circle cx="12" cy="12" r="6.8" fill="none" stroke="#f4f0e6" stroke-width="2.2"/>
+      <text x="34" y="18" font-size="18" fill="#191712" font-family="'Instrument Serif',Georgia,serif">Nexus LabSystems</text>
+    </g>
+  </g>
+</svg>

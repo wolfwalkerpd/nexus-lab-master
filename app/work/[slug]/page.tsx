@@ -31,8 +31,28 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
       <section className="wrap pb-5 pt-2">
         <FadeIn>
-          <div className="flex aspect-[16/9] items-center justify-center rounded-[18px] border font-mono text-[11px] tracking-[0.14em] text-white/70 hair sm:aspect-[21/9] sm:text-[13px]" style={{ background: c.hue }}>
-            PROJECT HERO IMAGE
+          {/* `relative` so the Visit button can anchor to the image's corner. */}
+          <div className="relative">
+            {/* Natural height — the image keeps its own proportions, never cropped.
+                `height:auto` comes from the global img reset in globals.css. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={c.img}
+              alt={`${c.client} — ${c.title}`}
+              className="block w-full rounded-[18px] border hair"
+            />
+            {c.url && (
+              <a
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit the live ${c.client} website (opens in a new tab)`}
+                className="absolute bottom-4 right-4 inline-flex min-h-[40px] items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-bg no-underline shadow-[0_6px_20px_rgba(0,0,0,0.28)] transition-transform hover:-translate-y-0.5"
+              >
+                Visit
+                <span aria-hidden>↗</span>
+              </a>
+            )}
           </div>
         </FadeIn>
       </section>

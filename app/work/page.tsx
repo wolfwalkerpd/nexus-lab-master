@@ -34,7 +34,7 @@ export default function WorkPage() {
           {WORK.map((w) => (
             <FadeIn key={w.slug}>
               <Link href={`/work/${w.slug}`} className="surface grid grid-cols-1 items-center gap-6 overflow-hidden text-ink no-underline transition-colors hover:border-ink/30 md:grid-cols-[1fr_1.1fr] md:gap-9">
-                <div className="flex aspect-[16/11] h-full items-end p-[22px]" style={{ background: w.grad }}>
+                <div className="flex aspect-[16/11] h-full items-end bg-cover bg-center bg-no-repeat p-[22px]" style={{ backgroundImage: `url('${w.img}')` }}>
                   <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/90">{w.tag} · {w.kind}</span>
                 </div>
                 <div className="px-gutter pb-[30px] md:py-[30px] md:pl-0 md:pr-[34px]">

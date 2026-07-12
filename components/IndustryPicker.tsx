@@ -9,7 +9,12 @@ export default function IndustryPicker() {
   const active = INDUSTRIES[i];
 
   return (
-    <section className="border-y bg-panel hair">
+    <section
+      className="border-y transition-colors duration-700 ease-out hair"
+      // Soft wash of the active industry's hue over the warm panel base —
+      // transition-colors fades it smoothly when you switch tabs.
+      style={{ backgroundColor: `color-mix(in srgb, ${active.hue} 14%, var(--panel))` }}
+    >
       <div className="wrap py-sectionsm">
         <FadeIn className="mb-7 flex flex-wrap items-end justify-between gap-4">
           <div>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" font-family="'Work Sans',system-ui,sans-serif">
+  <defs><filter id="sh" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#191712" flood-opacity="0.18"/></filter></defs>
+  <g filter="url(#sh)">
+    <rect x="10" y="10" width="540" height="400" rx="14" fill="#fbf9f3" stroke="#1917121a"/>
+    <rect x="10" y="10" width="540" height="40" rx="14" fill="#ede7d8"/>
+    <rect x="10" y="34" width="540" height="16" fill="#ede7d8"/>
+    <circle cx="34" cy="30" r="5.5" fill="#b7472a"/><circle cx="52" cy="30" r="5.5" fill="#d6b24a"/><circle cx="70" cy="30" r="5.5" fill="#7a9a6d"/>
+    <rect x="92" y="21" width="420" height="18" rx="9" fill="#fbf9f3"/>
+    <text x="106" y="34" font-size="11" fill="#8a8578" font-family="'IBM Plex Mono',monospace">professional-services.co.uk</text>
+  </g>
+  <clipPath id="page"><rect x="10" y="50" width="540" height="360"/></clipPath>
+  <g clip-path="url(#page)">
+
+  <rect x="10" y="50" width="540" height="360" fill="#fbf9f3"/>
+  <rect x="34" y="66" width="22" height="22" rx="5" fill="#1c2630"/>
+  <rect x="64" y="72" width="80" height="11" rx="5.5" fill="#191712" opacity="0.85"/>
+  <rect x="330" y="73" width="34" height="7" rx="3.5" fill="#8a8578" opacity="0.6"/><rect x="374" y="73" width="28" height="7" rx="3.5" fill="#8a8578" opacity="0.6"/><rect x="412" y="73" width="30" height="7" rx="3.5" fill="#8a8578" opacity="0.6"/>
+  <rect x="34" y="108" width="70" height="8" rx="4" fill="#b7472a"/>
+  <rect x="34" y="128" width="230" height="19" rx="5" fill="#191712"/>
+  <rect x="34" y="155" width="180" height="19" rx="5" fill="#191712"/>
+  <rect x="34" y="196" width="230" height="7" rx="3.5" fill="#8a8578" opacity="0.55"/>
+  <rect x="34" y="210" width="190" height="7" rx="3.5" fill="#8a8578" opacity="0.55"/>
+  <rect x="34" y="232" width="150" height="34" rx="6" fill="#1c2630"/><text x="109" y="254" font-size="11" fill="#fff" text-anchor="middle" font-weight="600">Book a consultation</text>
+  <rect x="330" y="108" width="196" height="168" rx="10" fill="#1c2630"/>
+  <rect x="348" y="230" width="20" height="30" fill="#b7472a"/><rect x="376" y="212" width="20" height="48" fill="#5a6b7a"/><rect x="404" y="190" width="20" height="70" fill="#5a6b7a"/><rect x="432" y="200" width="20" height="60" fill="#5a6b7a"/><rect x="460" y="168" width="20" height="92" fill="#b7472a"/>
+  <polyline points="358,220 386,206 414,184 442,192 470,160" fill="none" stroke="#f4f0e6" stroke-width="2.5"/>
+  <rect x="348" y="130" width="90" height="8" rx="4" fill="#ffffff" opacity="0.9"/><rect x="348" y="146" width="60" height="6" rx="3" fill="#ffffff" opacity="0.4"/>
+  <rect x="34" y="300" width="150" height="86" rx="8" fill="#ede7d8"/><rect x="50" y="322" width="46" height="20" rx="4" fill="#1c2630"/><rect x="50" y="356" width="110" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+  <rect x="200" y="300" width="150" height="86" rx="8" fill="#ede7d8"/><rect x="216" y="322" width="56" height="20" rx="4" fill="#1c2630"/><rect x="216" y="356" width="110" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+  <rect x="366" y="300" width="160" height="86" rx="8" fill="#ede7d8"/><rect x="382" y="322" width="70" height="20" rx="4" fill="#b7472a"/><rect x="382" y="356" width="120" height="6" rx="3" fill="#8a8578" opacity="0.6"/>
+
+  </g>
+</svg>
