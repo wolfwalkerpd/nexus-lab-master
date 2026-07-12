@@ -1,27 +1,30 @@
 import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 import { EMAIL, NAV } from "@/lib/site";
 
 export default function SiteFooter() {
   return (
     <footer className="bg-ink text-ondark">
-      <div className="wrap flex flex-wrap items-center justify-between gap-9 border-b border-white/10 py-sectionsm">
-        <div className="min-w-0 flex-1 basis-[300px]">
-          <div className="serif max-w-[540px] text-h4 text-bg">
-            Not sure where your website is losing you customers?
+      <FadeIn>
+        <div className="wrap flex flex-wrap items-center justify-between gap-9 border-b border-white/10 py-sectionsm">
+          <div className="min-w-0 flex-1 basis-[300px]">
+            <div className="serif max-w-[540px] text-h4 text-bg">
+              Not sure where your website is losing you customers?
+            </div>
+            <div className="mt-3 max-w-[520px] text-[15px] leading-relaxed text-muted3">
+              Book a free teardown — we screen-record your site, show you exactly
+              what&apos;s costing you leads, and how we&apos;d fix it. No pitch, no
+              obligation.
+            </div>
           </div>
-          <div className="mt-3 max-w-[520px] text-[15px] leading-relaxed text-muted3">
-            Book a free teardown — we screen-record your site, show you exactly
-            what&apos;s costing you leads, and how we&apos;d fix it. No pitch, no
-            obligation.
-          </div>
+          <Link href="/contact" className="btn-primary btn-lg w-full sm:w-auto">
+            Book your free teardown →
+          </Link>
         </div>
-        <Link href="/contact" className="btn-primary btn-lg w-full sm:w-auto">
-          Book your free teardown →
-        </Link>
-      </div>
+      </FadeIn>
 
       <div className="wrap grid grid-cols-1 gap-11 py-12 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr]">
-        <div className="sm:col-span-2 md:col-span-1">
+        <FadeIn className="sm:col-span-2 md:col-span-1">
           <Link href="/" className="flex items-center gap-[10px] no-underline">
             <span className="relative inline-block h-[26px] w-[26px] flex-none rounded-full bg-bg">
               <span className="absolute inset-[7px] rounded-full border-[1.5px] border-ink" />
@@ -39,9 +42,9 @@ export default function SiteFooter() {
           >
             {EMAIL}
           </a>
-        </div>
+        </FadeIn>
 
-        <div>
+        <FadeIn delay={80}>
           <div className="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted3">
             Explore
           </div>
@@ -55,9 +58,9 @@ export default function SiteFooter() {
               Contact
             </Link>
           </div>
-        </div>
+        </FadeIn>
 
-        <div>
+        <FadeIn delay={160}>
           <div className="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted3">
             Follow
           </div>
@@ -68,7 +71,7 @@ export default function SiteFooter() {
               </a>
             ))}
           </div>
-        </div>
+        </FadeIn>
       </div>
 
       <div className="wrap flex flex-wrap items-center justify-between gap-[10px] border-t border-white/10 py-[18px] text-[12.5px] text-muted3">

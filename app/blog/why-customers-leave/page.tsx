@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
+import FadeIn from "@/components/FadeIn";
 
 const reasons = [
   ["1. It loads too slowly", "Every extra second of load time costs you visitors — especially on mobile, on patchy signal, where most local searches happen. If your homepage takes four seconds to appear, a big chunk of people are already gone. Heavy images, bloated templates and cheap hosting are the usual culprits, and all three are fixable."],
@@ -24,14 +25,16 @@ export default function ArticlePage() {
       </article>
 
       <section className="mx-auto max-w-[1080px] px-gutter pb-2 pt-6">
-        <div className="flex aspect-[16/9] items-center justify-center rounded-[18px] border font-mono text-[11px] tracking-[0.14em] text-white/70 hair sm:aspect-[21/9] sm:text-[13px]" style={{ background: "linear-gradient(135deg,#B7472A,#8f3520)" }}>ARTICLE HERO IMAGE</div>
+        <FadeIn>
+          <div className="flex aspect-[16/9] items-center justify-center rounded-[18px] border font-mono text-[11px] tracking-[0.14em] text-white/70 hair sm:aspect-[21/9] sm:text-[13px]" style={{ background: "linear-gradient(135deg,#B7472A,#8f3520)" }}>ARTICLE HERO IMAGE</div>
+        </FadeIn>
       </section>
 
       <article className="mx-auto max-w-[680px] px-gutter pb-5 pt-10 text-lead leading-[1.75]" style={{ color: "#2b2820" }}>
         <p className="mb-[22px]">You have about five seconds. That&apos;s how long a visitor gives your website before they decide to stay or hit the back button and try the next result. For a local business, that decision is the difference between a booked job and a lost one — and most of the reasons people leave are completely fixable.</p>
         <p className="mb-8">Here are the five we see most often in a teardown, and the unglamorous fixes that keep people reading.</p>
         {reasons.map(([h, b], i) => (
-          <div key={i}>
+          <FadeIn key={i}>
             <h2 className="serif mb-[14px] text-h5 text-ink">{h}</h2>
             <p className="mb-8">{b}</p>
             {i === 2 && (
@@ -39,25 +42,29 @@ export default function ArticlePage() {
                 <div className="serif text-quote text-ink">&quot;If a visitor has to think about what to do next, you&apos;ve already lost half of them.&quot;</div>
               </div>
             )}
-          </div>
+          </FadeIn>
         ))}
-        <h2 className="serif mb-[14px] mt-[34px] text-h5 text-ink">How to fix it, fast</h2>
-        <div className="mb-8 flex flex-col gap-3">
-          {["Put a plain-English headline and a single clear call-to-action above the fold.", "Compress your images and move to fast, modern hosting.", "Test every page on your own phone — and fix what annoys you.", "Add three to five recent reviews near your call-to-action."].map((t) => (
-            <div key={t} className="flex gap-[11px] text-[16px]"><span className="flex-none font-bold text-accent">→</span>{t}</div>
-          ))}
-        </div>
-        <p>None of these require a full rebuild — but together they can meaningfully change how many visitors turn into enquiries. If you&apos;re not sure which apply to your site, that&apos;s exactly what a teardown is for.</p>
+        <FadeIn>
+          <h2 className="serif mb-[14px] mt-[34px] text-h5 text-ink">How to fix it, fast</h2>
+          <div className="mb-8 flex flex-col gap-3">
+            {["Put a plain-English headline and a single clear call-to-action above the fold.", "Compress your images and move to fast, modern hosting.", "Test every page on your own phone — and fix what annoys you.", "Add three to five recent reviews near your call-to-action."].map((t) => (
+              <div key={t} className="flex gap-[11px] text-[16px]"><span className="flex-none font-bold text-accent">→</span>{t}</div>
+            ))}
+          </div>
+          <p>None of these require a full rebuild — but together they can meaningfully change how many visitors turn into enquiries. If you&apos;re not sure which apply to your site, that&apos;s exactly what a teardown is for.</p>
+        </FadeIn>
       </article>
 
       <section className="mx-auto max-w-[680px] px-gutter pb-2 pt-6">
-        <div className="surface flex items-center gap-4 px-5 py-6 sm:px-[26px]">
-          <span className="inline-block h-14 w-14 flex-none rounded-full bg-av" />
-          <div className="min-w-0">
-            <div className="serif mb-[3px] text-[20px]">[Author name]</div>
-            <div className="text-[14px] leading-relaxed text-muted2">[Short author bio — role at Nexus LabSystems and a line on what they write about.]</div>
+        <FadeIn>
+          <div className="surface flex items-center gap-4 px-5 py-6 sm:px-[26px]">
+            <span className="inline-block h-14 w-14 flex-none rounded-full bg-av" />
+            <div className="min-w-0">
+              <div className="serif mb-[3px] text-[20px]">[Author name]</div>
+              <div className="text-[14px] leading-relaxed text-muted2">[Short author bio — role at Nexus LabSystems and a line on what they write about.]</div>
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <CtaBand heading="See which of these are costing you customers." sub="Book a free teardown and we'll record a walkthrough of your own site." />

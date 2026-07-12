@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CtaBand from "@/components/CtaBand";
+import FadeIn from "@/components/FadeIn";
 import { INDUSTRY_PAGES, getIndustry } from "@/lib/industries";
 import type { Metadata } from "next";
 
@@ -31,7 +32,7 @@ export default function IndustryDetail({ params }: { params: { slug: string } })
   return (
     <>
       <section className="wrap grid grid-cols-1 items-center gap-10 pb-[30px] pt-section lg:grid-cols-[1.1fr_0.9fr] lg:gap-[52px]">
-        <div>
+        <FadeIn>
           <div className="mb-4 font-mono text-[12px] font-medium uppercase tracking-[0.2em]">
             <Link href="/industries" className="text-muted3">Industries</Link> / {ind.label}
           </div>
@@ -41,8 +42,8 @@ export default function IndustryDetail({ params }: { params: { slug: string } })
             <Link href="/contact" className="btn-primary w-full sm:w-auto">Book your free teardown →</Link>
             <Link href={ind.caseHref} className="btn-ghost w-full sm:w-auto">{ind.caseLabel}</Link>
           </div>
-        </div>
-        <div className="overflow-hidden rounded-[14px] border shadow-[0_20px_50px_rgba(var(--ink-rgb),0.16)] hair">
+        </FadeIn>
+        <FadeIn delay={80} className="min-w-0 overflow-hidden rounded-[14px] border shadow-[0_20px_50px_rgba(var(--ink-rgb),0.16)] hair">
           <div className="flex items-center gap-[7px] border-b bg-av px-[15px] py-[11px] hair">
             <span className="h-[11px] w-[11px] flex-none rounded-full" style={{ background: "#c9713f" }} />
             <span className="h-[11px] w-[11px] flex-none rounded-full" style={{ background: "#d6b24a" }} />
@@ -62,41 +63,51 @@ export default function IndustryDetail({ params }: { params: { slug: string } })
               ))}
             </div>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <section className="border-y bg-panel hair">
         <div className="wrap py-sectionsm">
-          <div className="eyebrow mb-3">What we build</div>
-          <h2 className="serif mb-[38px] text-h3 tracking-[-0.3px]">{ind.featuresHeading}</h2>
+          <FadeIn>
+            <div className="eyebrow mb-3">What we build</div>
+            <h2 className="serif mb-[38px] text-h3 tracking-[-0.3px]">{ind.featuresHeading}</h2>
+          </FadeIn>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {ind.features.map(([t, d]) => (
-              <div key={t} className="surface p-6 sm:p-[26px]">
-                <div className="serif mb-2 text-[22px]">{t}</div>
-                <div className="text-[14px] leading-relaxed text-muted2">{d}</div>
-              </div>
+            {ind.features.map(([t, d], i) => (
+              <FadeIn key={t} delay={(i % 3) * 80}>
+                <div className="surface h-full p-6 sm:p-[26px]">
+                  <div className="serif mb-2 text-[22px]">{t}</div>
+                  <div className="text-[14px] leading-relaxed text-muted2">{d}</div>
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
       <section className="wrap pb-10 pt-section">
-        <h2 className="serif mb-8 text-h3 tracking-[-0.3px]">The outcomes that matter</h2>
+        <FadeIn>
+          <h2 className="serif mb-8 text-h3 tracking-[-0.3px]">The outcomes that matter</h2>
+        </FadeIn>
         <div className="grid grid-cols-1 gap-[22px] md:grid-cols-3">
-          {ind.outcomes.map(([t, d]) => (
-            <div key={t} className="border-l-2 border-accent py-[6px] pl-[22px]">
-              <div className="serif mb-2 text-h6">{t}</div>
-              <div className="text-[14.5px] leading-relaxed text-muted2">{d}</div>
-            </div>
+          {ind.outcomes.map(([t, d], i) => (
+            <FadeIn key={t} delay={i * 80}>
+              <div className="h-full border-l-2 border-accent py-[6px] pl-[22px]">
+                <div className="serif mb-2 text-h6">{t}</div>
+                <div className="text-[14.5px] leading-relaxed text-muted2">{d}</div>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </section>
 
       <section className="wrap pb-10">
-        <div className="surface p-card">
-          <div className="serif max-w-[820px] text-quote text-ink">&quot;{ind.quote}&quot;</div>
-          <div className="mt-[22px] text-[14px] text-muted3">{ind.quoteBy}</div>
-        </div>
+        <FadeIn>
+          <div className="surface p-card">
+            <div className="serif max-w-[820px] text-quote text-ink">&quot;{ind.quote}&quot;</div>
+            <div className="mt-[22px] text-[14px] text-muted3">{ind.quoteBy}</div>
+          </div>
+        </FadeIn>
       </section>
 
       <CtaBand heading={ind.ctaHeading} sub={ind.ctaSub} />

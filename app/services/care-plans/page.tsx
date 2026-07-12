@@ -1,9 +1,10 @@
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
+import FadeIn from "@/components/FadeIn";
 import { CARE_PLANS } from "@/lib/site";
 import type { Metadata } from "next";
 
-export const maintenanceMetadata: Metadata = {
+export const metadata: Metadata = {
   title: "Website Care Plans & Maintenance",
   description:
     "Monthly website care — updates, security, backups, hosting and ongoing tweaks — so your site stays fast, safe and working. Handled for you.",
@@ -31,7 +32,7 @@ export default function CarePlansPage() {
   return (
     <>
       <section className="wrap grid grid-cols-1 items-center gap-10 pb-[30px] pt-section lg:grid-cols-[1.1fr_0.9fr] lg:gap-[52px]">
-        <div>
+        <FadeIn>
           <div className="mb-4 font-mono text-[12px] font-medium uppercase tracking-[0.2em]">
             <Link href="/services" className="text-muted3">Services</Link> / Care Plans, Maintenance &amp; Hosting
           </div>
@@ -43,8 +44,8 @@ export default function CarePlansPage() {
             <Link href="/contact" className="btn-primary w-full sm:w-auto">Book your free teardown →</Link>
             <Link href="/pricing" className="btn-ghost w-full sm:w-auto">See plan pricing</Link>
           </div>
-        </div>
-        <div className="surface p-[22px] shadow-[0_20px_50px_rgba(var(--ink-rgb),0.14)]">
+        </FadeIn>
+        <FadeIn delay={80} className="surface min-w-0 p-[22px] shadow-[0_20px_50px_rgba(var(--ink-rgb),0.14)]">
           <div className="mb-[14px] flex flex-wrap items-center justify-between gap-2 border-b pb-[14px] hair">
             <span className="min-w-0 truncate font-mono text-[11px] text-muted3">your-business.co.uk</span>
             <span className="flex-none rounded-full px-[10px] py-1 text-[11px] font-bold" style={{ background: "#e7f0e2", color: "#3c7d38" }}>All systems healthy</span>
@@ -57,48 +58,54 @@ export default function CarePlansPage() {
               </div>
             ))}
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <section className="border-y bg-panel hair">
         <div className="wrap py-sectionsm">
-          <div className="eyebrow mb-3">What&apos;s included</div>
-          <h2 className="serif mb-[38px] text-h3 tracking-[-0.3px]">Everything handled, nothing to think about</h2>
+          <FadeIn>
+            <div className="eyebrow mb-3">What&apos;s included</div>
+            <h2 className="serif mb-[38px] text-h3 tracking-[-0.3px]">Everything handled, nothing to think about</h2>
+          </FadeIn>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {included.map(([t, d]) => (
-              <div key={t} className="surface p-[22px]">
-                <div className="serif mb-[7px] text-[20px]">{t}</div>
-                <div className="text-[13.5px] leading-relaxed text-muted2">{d}</div>
-              </div>
+            {included.map(([t, d], i) => (
+              <FadeIn key={t} delay={(i % 4) * 80}>
+                <div className="surface h-full p-[22px]">
+                  <div className="serif mb-[7px] text-[20px]">{t}</div>
+                  <div className="text-[13.5px] leading-relaxed text-muted2">{d}</div>
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
       <section className="wrap pb-6 pt-section">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <FadeIn className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <div className="eyebrow mb-3">Monthly plans</div>
             <h2 className="serif text-h3 tracking-[-0.3px]">Pick your level of care</h2>
           </div>
           <Link href="/pricing" className="text-[14.5px] font-medium text-accent">Full pricing &amp; comparison →</Link>
-        </div>
+        </FadeIn>
         <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-3">
-          {CARE_PLANS.map((p) => (
-            <div key={p.name} className="surface flex flex-col p-card" style={{ borderColor: p.popular ? "var(--accent)" : undefined }}>
-              <div className="mb-[6px] flex flex-wrap items-center justify-between gap-2">
-                <span className="serif text-h6">{p.name}</span>
-                {p.popular && <span className="rounded-full border border-accent px-[10px] py-[3px] text-[11px] font-semibold text-accent">Popular</span>}
+          {CARE_PLANS.map((p, i) => (
+            <FadeIn key={p.name} delay={i * 80}>
+              <div className="surface flex h-full flex-col p-card" style={{ borderColor: p.popular ? "var(--accent)" : undefined }}>
+                <div className="mb-[6px] flex flex-wrap items-center justify-between gap-2">
+                  <span className="serif text-h6">{p.name}</span>
+                  {p.popular && <span className="rounded-full border border-accent px-[10px] py-[3px] text-[11px] font-semibold text-accent">Popular</span>}
+                </div>
+                <div className="mb-[18px] min-h-[38px] text-[13.5px] text-muted2">{p.desc}</div>
+                <div className="mb-5 flex flex-wrap items-baseline gap-[6px]">
+                  <span className="text-[13px] text-muted3">from</span>
+                  <span className="rounded-[7px] bg-accentweak px-[10px] py-[5px] font-mono text-[15px] text-accent">{p.price}{p.suffix}</span>
+                </div>
+                <div className="flex flex-col gap-[9px] text-[13.5px] text-muted">
+                  {p.features.map((f) => <div key={f} className="flex gap-[9px]"><span className="flex-none text-accent">✓</span>{f}</div>)}
+                </div>
               </div>
-              <div className="mb-[18px] min-h-[38px] text-[13.5px] text-muted2">{p.desc}</div>
-              <div className="mb-5 flex flex-wrap items-baseline gap-[6px]">
-                <span className="text-[13px] text-muted3">from</span>
-                <span className="rounded-[7px] bg-accentweak px-[10px] py-[5px] font-mono text-[15px] text-accent">{p.price}{p.suffix}</span>
-              </div>
-              <div className="flex flex-col gap-[9px] text-[13.5px] text-muted">
-                {p.features.map((f) => <div key={f} className="flex gap-[9px]"><span className="flex-none text-accent">✓</span>{f}</div>)}
-              </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>

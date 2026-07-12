@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import FadeIn from "@/components/FadeIn";
 import { INDUSTRIES } from "@/lib/site";
 
 export default function IndustryPicker() {
@@ -10,7 +11,7 @@ export default function IndustryPicker() {
   return (
     <section className="border-y bg-panel hair">
       <div className="wrap py-sectionsm">
-        <div className="mb-7 flex flex-wrap items-end justify-between gap-4">
+        <FadeIn className="mb-7 flex flex-wrap items-end justify-between gap-4">
           <div>
             <div className="eyebrow mb-3">See yourself here</div>
             <h2 className="serif m-0 max-w-[560px] text-h2 leading-[1.05] tracking-[-0.3px]">
@@ -37,12 +38,12 @@ export default function IndustryPicker() {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 items-start gap-[34px] lg:grid-cols-2">
           {/* website preview */}
-          <div
-            className="overflow-hidden rounded-[14px] border shadow-[0_20px_50px_rgba(var(--ink-rgb),0.16)] hair"
+          <FadeIn
+            className="min-w-0 overflow-hidden rounded-[14px] border shadow-[0_20px_50px_rgba(var(--ink-rgb),0.16)] hair"
           >
             <div className="flex items-center gap-[7px] border-b bg-av px-[15px] py-[11px] hair">
               <span className="h-[11px] w-[11px] flex-none rounded-full" style={{ background: "#c9713f" }} />
@@ -71,10 +72,10 @@ export default function IndustryPicker() {
                 ))}
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* rank tracker */}
-          <div className="min-w-0 rounded-[20px] border bg-bg p-3 shadow-[0_20px_50px_rgba(var(--ink-rgb),0.14)] hair sm:p-[18px]">
+          <FadeIn delay={80} className="min-w-0 rounded-[20px] border bg-bg p-3 shadow-[0_20px_50px_rgba(var(--ink-rgb),0.14)] hair sm:p-[18px]">
             <div className="mb-[13px] flex items-stretch gap-[11px]">
               <div className="flex min-w-0 flex-1 items-center gap-[11px] rounded-[16px] border bg-card px-[15px] py-3 hair">
                 <span className="relative inline-block h-[15px] w-[15px] flex-none">
@@ -138,10 +139,10 @@ export default function IndustryPicker() {
                 </div>
               ))}
             </div>
-          </div>
+          </FadeIn>
         </div>
 
-        <div className="mt-[34px]">
+        <FadeIn className="mt-[34px]">
           <h3 className="serif mb-[10px] text-h5">{active.head}</h3>
           <p className="mb-[22px] max-w-[680px] text-[16px] leading-relaxed text-muted">
             {active.sub} Every site we build is designed to rank on Google and turn
@@ -159,7 +160,7 @@ export default function IndustryPicker() {
               </div>
             ))}
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -1,8 +1,9 @@
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
+import FadeIn from "@/components/FadeIn";
 import { Metadata } from "next";
 
-export const industriesMetadata: Metadata = {
+export const metadata: Metadata = {
   title: "Industries We Build For",
   description:
     "Websites and SEO tailored to local-trust businesses — dental and healthcare, professional services, and trades. Built by someone who understands your customer.",
@@ -24,30 +25,34 @@ const cards = [
 export default function IndustriesPage() {
   return (
     <>
-      <section className="wrap pb-[30px] pt-section">
-        <div className="eyebrow mb-[18px]">Industries</div>
-        <h1 className="serif mb-[22px] max-w-[900px] text-h1 tracking-[-0.5px]">Built for how your industry actually wins customers.</h1>
-        <p className="max-w-[640px] text-lead text-muted">
-          A dentist, a solicitor and a roofer don&apos;t win business the same way. We&apos;ve built for all three — so your site speaks your customers&apos; language and drives the action that matters to you.
-        </p>
-      </section>
+      <FadeIn>
+        <section className="wrap pb-[30px] pt-section">
+          <div className="eyebrow mb-[18px]">Industries</div>
+          <h1 className="serif mb-[22px] max-w-[900px] text-h1 tracking-[-0.5px]">Built for how your industry actually wins customers.</h1>
+          <p className="max-w-[640px] text-lead text-muted">
+            A dentist, a solicitor and a roofer don&apos;t win business the same way. We&apos;ve built for all three — so your site speaks your customers&apos; language and drives the action that matters to you.
+          </p>
+        </section>
+      </FadeIn>
 
       <section className="wrap pb-6 pt-[50px]">
         <div className="flex flex-col gap-[22px]">
           {cards.map((c) => (
-            <Link key={c.href} href={c.href} className="surface grid grid-cols-1 items-center gap-6 overflow-hidden text-ink no-underline transition-colors hover:border-ink/30 md:grid-cols-[0.8fr_1.2fr] md:gap-8">
-              <div className="flex aspect-[16/11] h-full items-end p-[22px]" style={{ background: c.grad }}>
-                <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/90">{c.label}</span>
-              </div>
-              <div className="px-gutter pb-[30px] md:py-[30px] md:pl-0 md:pr-[34px]">
-                <h2 className="serif mb-[10px] text-h5">{c.label}</h2>
-                <p className="mb-4 max-w-[520px] text-[15px] leading-relaxed text-muted2">{c.blurb}</p>
-                <div className="flex flex-wrap gap-x-5 gap-y-2 text-[13.5px] text-muted">
-                  {c.bullets.map((b) => <span key={b} className="flex gap-2"><span className="flex-none text-accent">✓</span>{b}</span>)}
+            <FadeIn key={c.href}>
+              <Link href={c.href} className="surface grid grid-cols-1 items-center gap-6 overflow-hidden text-ink no-underline transition-colors hover:border-ink/30 md:grid-cols-[0.8fr_1.2fr] md:gap-8">
+                <div className="flex aspect-[16/11] h-full items-end p-[22px]" style={{ background: c.grad }}>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/90">{c.label}</span>
                 </div>
-                <span className="mt-[18px] inline-block text-[14px] font-semibold text-accent">Explore {c.label.toLowerCase()} →</span>
-              </div>
-            </Link>
+                <div className="px-gutter pb-[30px] md:py-[30px] md:pl-0 md:pr-[34px]">
+                  <h2 className="serif mb-[10px] text-h5">{c.label}</h2>
+                  <p className="mb-4 max-w-[520px] text-[15px] leading-relaxed text-muted2">{c.blurb}</p>
+                  <div className="flex flex-wrap gap-x-5 gap-y-2 text-[13.5px] text-muted">
+                    {c.bullets.map((b) => <span key={b} className="flex gap-2"><span className="flex-none text-accent">✓</span>{b}</span>)}
+                  </div>
+                  <span className="mt-[18px] inline-block text-[14px] font-semibold text-accent">Explore {c.label.toLowerCase()} →</span>
+                </div>
+              </Link>
+            </FadeIn>
           ))}
         </div>
       </section>

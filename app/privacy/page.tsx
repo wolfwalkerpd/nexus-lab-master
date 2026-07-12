@@ -1,4 +1,4 @@
-import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 
 const sections: [string, React.ReactNode][] = [
   ["1. Who we are", <>Nexus LabSystems is a website design and digital marketing studio based in the United Kingdom. For any privacy questions, or to exercise your rights, contact us at <a href="mailto:contact@nexuslabsystems.com">contact@nexuslabsystems.com</a>. Our registered address is [Company address placeholder].</>],
@@ -13,11 +13,13 @@ const sections: [string, React.ReactNode][] = [
 export default function PrivacyPage() {
   return (
     <>
-      <section className="mx-auto max-w-[760px] px-gutter pb-7 pt-section">
-        <div className="eyebrow mb-[18px]">Legal</div>
-        <h1 className="serif mb-4 text-h1 tracking-[-0.5px]">Privacy Policy</h1>
-        <p className="text-[15px] text-muted3">Last updated: [Month Year]</p>
-      </section>
+      <FadeIn>
+        <section className="mx-auto max-w-[760px] px-gutter pb-7 pt-section">
+          <div className="eyebrow mb-[18px]">Legal</div>
+          <h1 className="serif mb-4 text-h1 tracking-[-0.5px]">Privacy Policy</h1>
+          <p className="text-[15px] text-muted3">Last updated: [Month Year]</p>
+        </section>
+      </FadeIn>
 
       <article className="mx-auto max-w-[720px] px-gutter pb-10 text-[16.5px] leading-[1.75] text-muted">
         <p className="mb-[30px]">This policy explains how Nexus LabSystems (&quot;we&quot;, &quot;us&quot;) collects, uses and protects your personal data when you visit our website or get in touch with us. We take your privacy seriously and handle your data in line with UK GDPR and the Data Protection Act 2018.</p>
@@ -35,10 +37,10 @@ export default function PrivacyPage() {
         </div>
 
         {sections.slice(1, 6).map(([h, b]) => (
-          <div key={h}>
+          <FadeIn key={h}>
             <h2 className="serif mb-3 mt-[34px] text-h6 text-ink">{h}</h2>
             <p className="mb-6">{b}</p>
-          </div>
+          </FadeIn>
         ))}
 
         <h2 className="serif mb-3 mt-[34px] text-h6 text-ink">8. Your rights</h2>
@@ -47,9 +49,11 @@ export default function PrivacyPage() {
         <h2 className="serif mb-3 mt-[34px] text-h6 text-ink">{sections[6][0]}</h2>
         <p className="mb-6">{sections[6][1]}</p>
 
-        <div className="mt-9 rounded-[14px] bg-panel px-[26px] py-6 text-[15px] text-muted">
-          Questions about your data? Email <a href="mailto:contact@nexuslabsystems.com" className="font-medium">contact@nexuslabsystems.com</a> and we&apos;ll be happy to help.
-        </div>
+        <FadeIn>
+          <div className="mt-9 rounded-[14px] bg-panel px-[26px] py-6 text-[15px] text-muted">
+            Questions about your data? Email <a href="mailto:contact@nexuslabsystems.com" className="font-medium">contact@nexuslabsystems.com</a> and we&apos;ll be happy to help.
+          </div>
+        </FadeIn>
       </article>
     </>
   );
