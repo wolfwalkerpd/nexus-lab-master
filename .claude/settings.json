@@ -24,7 +24,16 @@
       "Bash(curl -s --max-time 10 \"http://localhost:3128/blog/why-customers-leave\")",
       "Bash(npm install *)",
       "Bash(node -e \"console.log\\('resend version: ' + require\\('resend/package.json'\\).version\\)\")",
-      "Bash(npm audit *)"
+      "Bash(npm audit *)",
+      "Bash(cd \"c:/javad/webwork/main project/NexusLab/nexus-lab-master/nexus-lab-master\")",
+      "Bash(echo \"=== @vercel/analytics in package.json? ===\")",
+      "Bash(grep '\"@vercel/analytics\"' package.json)",
+      "Bash(echo \"NOT in package.json\")",
+      "Bash(node -e \"try{const e=require\\('node_modules/@vercel/analytics/package.json'\\).exports;console.log\\(Object.keys\\(e\\).filter\\(k=>k.includes\\('next'\\)\\)\\)}catch\\(err\\){console.log\\('err',err.message\\)}\")",
+      "Bash(node -e \"try{require.resolve\\('@vercel/analytics/next'\\);console.log\\('resolves OK'\\)}catch\\(e\\){console.log\\('RESOLVE FAILS:', e.code\\)}\")",
+      "Bash(node -e \"const fs=require\\('fs'\\);console.log\\(JSON.parse\\(fs.readFileSync\\('node_modules/@vercel/analytics/package.json','utf8'\\)\\).version\\)\")",
+      "Bash(node -e \"try{require.resolve\\('@vercel/analytics/next'\\);console.log\\('resolves OK ✓'\\)}catch\\(e\\){console.log\\('FAILS:',e.code\\)}\")",
+      "Bash(rm -f \"C:/Users/ASUS/AppData/Local/Temp/claude/c--javad-webwork-main-project-NexusLab-nexus-lab-master-nexus-lab-master/d3d71d54-2567-45ae-a005-e563ca9d056a/scratchpad/va.js\")"
     ]
   }
 }

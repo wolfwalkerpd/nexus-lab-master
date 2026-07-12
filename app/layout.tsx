@@ -4,6 +4,7 @@ import "./globals.css";
 import PageLoader from "@/components/PageLoader";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { Analytics } from "@vercel/analytics/next"
 
 const display = Instrument_Serif({
   weight: "400",
@@ -159,6 +160,7 @@ export default function RootLayout({
       <body>
         <PageLoader />
         <SiteHeader />
+        <Analytics />
         <main>{children}</main>
         <SiteFooter />
       </body>
