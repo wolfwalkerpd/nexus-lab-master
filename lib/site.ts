@@ -186,10 +186,12 @@ export const BUILD_PLANS: Plan[] = [
   { name: "Complete", price: "£3,950", desc: "Everything, done for you — the full brand, site, copy and SEO.", features: ["8+ pages, everything in Growth", "Full brand identity", "Advanced SEO + content plan", "Full site copywriting", "Priority build + team training"] },
 ];
 
+// `price` is the number only — the "/mo" comes from `suffix`, so don't put it
+// in both or it renders twice.
 export const CARE_PLANS: Plan[] = [
-  { name: "Essential", price: "£39 /mo", suffix: "/mo", desc: "The safety net every website needs.", features: ["Managed UK hosting", "SSL & security monitoring", "Daily backups", "Software & uptime monitoring"] },
-  { name: "Growth", price: "£89 /mo", suffix: "/mo", popular: true, desc: "Care plus regular edits and priority support.", features: ["Everything in Essential", "Monthly content edits", "Priority email support", "Performance reviews"] },
-  { name: "Priority", price: "£179 /mo", suffix: "/mo", desc: "Hands-on care and ongoing improvements.", features: ["Everything in Growth", "Priority turnaround", "Quarterly strategy call", "Ongoing improvements"] },
+  { name: "Essential", price: "£39", suffix: "/mo", desc: "The safety net every website needs.", features: ["Managed UK hosting", "SSL & security monitoring", "Daily backups", "Software & uptime monitoring"] },
+  { name: "Growth", price: "£89", suffix: "/mo", popular: true, desc: "Care plus regular edits and priority support.", features: ["Everything in Essential", "Monthly content edits", "Priority email support", "Performance reviews"] },
+  { name: "Priority", price: "£179", suffix: "/mo", desc: "Hands-on care and ongoing improvements.", features: ["Everything in Growth", "Priority turnaround", "Quarterly strategy call", "Ongoing improvements"] },
 ];
 
 export type Faq = { q: string; a: string };

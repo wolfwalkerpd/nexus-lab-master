@@ -3,7 +3,9 @@ import IndustryPicker from "@/components/IndustryPicker";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
-import { SERVICES, WORK, BUILD_PLANS, HOME_FAQ } from "@/lib/site";
+import PriceTag from "@/components/PriceTag";
+import { SERVICES, WORK, BUILD_PLANS, CARE_PLANS, HOME_FAQ } from "@/lib/site";
+import { PROMO, priceFor, promoLive, seatsLeft } from "@/lib/promo";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -142,7 +144,7 @@ export default function HomePage() {
                   <div className="mb-5 min-h-[40px] text-[13.5px] leading-relaxed text-muted2">{p.desc}</div>
                   <div className="mb-[22px] flex flex-wrap items-baseline gap-[6px]">
                     <span className="text-[13px] text-muted3">from</span>
-                    <span className="rounded-[7px] bg-accentweak px-[10px] py-[5px] font-mono text-[15px] text-accent">{p.price}</span>
+                    <PriceTag price={p.price} kind="build" variant="pill" />
                   </div>
                   <div className="mb-[26px] flex flex-col gap-[10px]">
                     {p.features.map((f) => (
@@ -158,9 +160,16 @@ export default function HomePage() {
           </div>
           <FadeIn>
             <p className="mt-[26px] text-center text-[14px] text-muted2">
-              Keep it running with a care plan from <strong>£39/mo</strong> — hosting, updates, backups &amp; support.{" "}
+              Keep it running with a care plan from{" "}
+              <strong>{priceFor(CARE_PLANS[0].price, "care")}{CARE_PLANS[0].suffix}</strong> — hosting, updates, backups &amp; support.{" "}
               <Link href="/pricing" className="font-medium">Full pricing →</Link>
             </p>
+            {promoLive() && (
+              <p className="mt-3 text-center text-[14px] font-semibold text-accent">
+                {PROMO.headline} · {PROMO.sub} — {seatsLeft()} of {PROMO.seats} spots left.{" "}
+                <Link href="/pricing" className="underline">See the offer →</Link>
+              </p>
+            )}
           </FadeIn>
         </div>
       </section>

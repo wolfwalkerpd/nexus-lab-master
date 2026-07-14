@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Instrument_Serif, Work_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import PageLoader from "@/components/PageLoader";
+import PromoBanner from "@/components/PromoBanner";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { Analytics } from "@vercel/analytics/next"
@@ -159,6 +160,7 @@ export default function RootLayout({
     >
       <body>
         <PageLoader />
+        <PromoBanner />
         <SiteHeader />
         <Analytics />
         <main>{children}</main>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
+import PriceTag from "@/components/PriceTag";
 import { CARE_PLANS } from "@/lib/site";
 import type { Metadata } from "next";
 
@@ -99,7 +100,7 @@ export default function CarePlansPage() {
                 <div className="mb-[18px] min-h-[38px] text-[13.5px] text-muted2">{p.desc}</div>
                 <div className="mb-5 flex flex-wrap items-baseline gap-[6px]">
                   <span className="text-[13px] text-muted3">from</span>
-                  <span className="rounded-[7px] bg-accentweak px-[10px] py-[5px] font-mono text-[15px] text-accent">{p.price}{p.suffix}</span>
+                  <PriceTag price={p.price} kind="care" suffix={p.suffix} variant="pill" />
                 </div>
                 <div className="flex flex-col gap-[9px] text-[13.5px] text-muted">
                   {p.features.map((f) => <div key={f} className="flex gap-[9px]"><span className="flex-none text-accent">✓</span>{f}</div>)}

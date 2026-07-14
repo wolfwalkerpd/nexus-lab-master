@@ -1,7 +1,9 @@
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
+import PriceTag from "@/components/PriceTag";
 import { BUILD_PLANS, CARE_PLANS } from "@/lib/site";
+import { PROMO, promoLive, seatsLeft } from "@/lib/promo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,9 +29,35 @@ export default function PricingPage() {
           <p className="mx-auto max-w-[620px] text-lead text-muted">
             Two simple parts: a one-off price to build your website, and an optional monthly plan to keep it running. Every project is fixed-price and agreed up front.
           </p>
-          <p className="mt-[18px] font-mono text-[12px] text-muted3">Figures below are placeholders — your exact quote comes after a free teardown.</p>
         </section>
       </FadeIn>
+
+      {/* LAUNCH OFFER — disappears entirely when PROMO.active = false */}
+      {promoLive() && (
+        <section className="wrap pt-2">
+          <FadeIn>
+            <div className="flex flex-wrap items-center justify-between gap-6 rounded-[20px] bg-ink p-card">
+              <div className="min-w-0 max-w-[640px]">
+                <div className="mb-2 flex flex-wrap items-center gap-3">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
+                    {PROMO.eyebrow}
+                  </span>
+                  <span className="rounded-full bg-accent px-[10px] py-[3px] text-[11px] font-bold text-white">
+                    {seatsLeft()} of {PROMO.seats} spots left
+                  </span>
+                </div>
+                <h2 className="serif mb-2 text-h3 text-bg">
+                  {PROMO.headline} · {PROMO.sub}
+                </h2>
+                <p className="text-[15px] leading-relaxed text-ondark">{PROMO.terms}</p>
+              </div>
+              <Link href="/contact" className="btn-primary btn-lg w-full sm:w-auto">
+                Claim your spot →
+              </Link>
+            </div>
+          </FadeIn>
+        </section>
+      )}
 
       {/* ONE-OFF BUILDS */}
       <section className="wrap pb-5 pt-11">
@@ -50,7 +78,7 @@ export default function PricingPage() {
                   {p.popular && <span className="rounded-full border border-accent px-[10px] py-[3px] text-[11px] font-semibold text-accent">Most popular</span>}
                 </div>
                 <div className="mb-[22px] min-h-[44px] text-[14px] leading-relaxed text-muted2">{p.desc}</div>
-                <div className="mb-[6px] flex flex-wrap items-baseline gap-2"><span className="text-[14px] text-muted3">from</span><span className="serif text-h3 text-ink">{p.price}</span></div>
+                <div className="mb-[6px] flex flex-wrap items-baseline gap-2"><span className="text-[14px] text-muted3">from</span><PriceTag price={p.price} kind="build" /></div>
                 <div className="mb-[26px] text-[12.5px] text-muted3">one-off</div>
                 <div className="mb-[30px] flex flex-col gap-[11px]">
                   {p.features.map((f) => <div key={f} className="flex gap-[9px] text-[14px] text-muted"><span className="flex-none text-accent">✓</span>{f}</div>)}
@@ -92,7 +120,7 @@ export default function PricingPage() {
                     {p.popular && <span className="rounded-full bg-accent px-[10px] py-[3px] text-[11px] font-semibold text-white">Popular</span>}
                   </div>
                   <div className="mb-[22px] min-h-[44px] text-[14px] text-muted3">{p.desc}</div>
-                  <div className="mb-[26px] flex flex-wrap items-baseline gap-2"><span className="text-[14px] text-muted3">from</span><span className="serif text-h3 text-bg">{p.price}</span><span className="text-[14px] text-muted3">{p.suffix}</span></div>
+                  <div className="mb-[26px] flex flex-wrap items-baseline gap-2"><span className="text-[14px] text-muted3">from</span><PriceTag price={p.price} kind="care" suffix={p.suffix} dark /></div>
                   <div className="mb-[30px] flex flex-col gap-[11px]">
                     {p.features.map((f) => <div key={f} className="flex gap-[9px] text-[14px] text-[color:#e7e0d2]"><span className="flex-none text-accent">✓</span>{f}</div>)}
                   </div>
