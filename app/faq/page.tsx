@@ -1,7 +1,9 @@
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import FaqExplorer from "@/components/FaqExplorer";
+import JsonLd from "@/components/JsonLd";
 import { EMAIL, FAQ_CATEGORIES, SITE_FAQS } from "@/lib/site";
+import { faqPageSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,13 +15,15 @@ export const metadata: Metadata = {
     title: "FAQ | Nexus Lab Systems",
     description:
       "Common questions about our process, pricing, ownership and SEO — answered plainly.",
-    url: "https://www.nexuslabsystems.com/faq",
+    url: "https://nexuslabsystems.com/faq",
   },
 };
 
 export default function FaqPage() {
   return (
     <>
+      <JsonLd data={faqPageSchema(SITE_FAQS)} />
+
       {/* Interactive help centre — NOT wrapped in FadeIn: its sticky category
           bar would break under a transformed ancestor. */}
       <FaqExplorer categories={FAQ_CATEGORIES} faqs={SITE_FAQS} />

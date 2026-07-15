@@ -154,20 +154,20 @@ export const WORK: Project[] = [
   {
     slug: "bright-smile-dental", name: "Bright Smile Dental", kind: "Website + SEO", tag: "Dental",
     img: "/image.png",
-    blurb: "A tired brochure site rebuilt into a booking machine — with local SEO that put them on the map, literally.",
-    metrics: [{ value: "+1%", label: "online bookings" }, { value: "#1", label: 'for "dentist near me"' }],
+    blurb: "A tired brochure site reimagined as a booking machine — with local SEO built in to get found for the searches that matter.",
+    metrics: [{ value: "24/7", label: "online booking" }, { value: "Day 1", label: "built for Google" }],
   },
   {
     slug: "apex-roofing", name: "Apex Roofing", kind: "Website + Brand", tag: "Trades",
     img: "/image2.png",
-    blurb: "A new brand and a website that turned a word-of-mouth roofer into the area's obvious choice.",
-    metrics: [{ value: "+1%", label: "quote requests" }, { value: "#1", label: "towns ranked" }],
+    blurb: "A new brand and a website built to make a word-of-mouth roofer look like the area's obvious choice.",
+    metrics: [{ value: "24/7", label: "quote capture" }, { value: "New", label: "brand + logo" }],
   },
   {
     slug: "copper-kitchen", name: "The Copper Kitchen", kind: "Website", tag: "Hospitality",
     img: "/image1.png",
-    blurb: "A restaurant site with live menus and bookings that filled tables on the quiet nights.",
-    metrics: [{ value: "+1%", label: "online reservations" }, { value: "+1%", label: "midweek covers" }],
+    blurb: "A restaurant site with live menus and online booking, designed to fill tables on the quiet nights.",
+    metrics: [{ value: "24/7", label: "table booking" }, { value: "Live", label: "editable menus" }],
   },
 ];
 

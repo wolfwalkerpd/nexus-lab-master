@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "About | Nexus Lab Systems",
     description:
       "Meet the one person who designs, builds and maintains your website — start to finish.",
-    url: "https://www.nexuslabsystems.com/about",
+    url: "https://nexuslabsystems.com/about",
   },
 };
 

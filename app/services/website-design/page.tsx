@@ -1,18 +1,20 @@
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Website Design & Development",
   description:
     "Fast, premium, conversion-focused websites built for local service businesses. Designed to make you look established and turn visitors into customers.",
-  alternates: { canonical: "/services/web-design" },
+  alternates: { canonical: "/services/website-design" },
   openGraph: {
     title: "Website Design & Development | Nexus Lab Systems",
     description:
       "Premium, fast, conversion-focused websites for local service businesses.",
-    url: "https://www.nexuslabsystems.com/services/web-design",
+    url: "https://nexuslabsystems.com/services/website-design",
   },
 };
 
@@ -37,6 +39,21 @@ const steps = [
 export default function WebDesignPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Website Design & Development",
+            description:
+              "Fast, premium, conversion-focused websites built for local service businesses.",
+            path: "/services/website-design",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "Website Design & Development", path: "/services/website-design" },
+          ]),
+        ]}
+      />
       <section className="wrap grid grid-cols-1 items-center gap-10 pb-[30px] pt-section lg:grid-cols-[1.1fr_0.9fr] lg:gap-[52px]">
         <FadeIn>
           <div className="mb-4 font-mono text-[12px] font-medium uppercase tracking-[0.2em]">

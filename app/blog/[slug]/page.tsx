@@ -3,10 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
 import { POSTS, getPost } from "@/lib/posts";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
-const BASE = "https://www.nexuslabsystems.com";
+const BASE = "https://nexuslabsystems.com";
 
 export function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
@@ -35,6 +37,16 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <JsonLd
+        data={[
+          blogPostingSchema(post),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
+      />
       <article className="mx-auto max-w-[760px] px-gutter pb-5 pt-section">
         <div className="mb-[18px] font-mono text-[12px] font-medium uppercase tracking-[0.2em]">
           <Link href="/blog" className="text-muted3">Resources</Link> / {post.category}

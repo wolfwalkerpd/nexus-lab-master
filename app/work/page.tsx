@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Work & Case Studies | Nexus Lab Systems",
     description: "Before-and-after teardowns and results-driven case studies.",
-    url: "https://www.nexuslabsystems.com/work",
+    url: "https://nexuslabsystems.com/work",
   },
 };
 export default function WorkPage() {
@@ -21,10 +21,10 @@ export default function WorkPage() {
     <>
       <FadeIn>
         <section className="wrap pb-5 pt-section">
-          <div className="eyebrow mb-[18px]">Work &amp; case studies</div>
+          <div className="eyebrow mb-[18px]">Example projects</div>
           <h1 className="serif mb-[22px] max-w-[900px] text-h1 tracking-[-0.5px]">Work that pays for itself.</h1>
           <p className="max-w-[640px] text-lead text-muted">
-            A website isn&apos;t a cost — it&apos;s a tool that should bring in more work than it ever cost to build. Here&apos;s how we&apos;ve done that for businesses like yours. (Figures shown are placeholders for your real results.)
+            A website isn&apos;t a cost — it&apos;s a tool that should bring in more work than it ever cost to build. Below are example projects showing how we&apos;d approach different kinds of local business.
           </p>
         </section>
       </FadeIn>
@@ -48,7 +48,7 @@ export default function WorkPage() {
                       </div>
                     ))}
                   </div>
-                  <span className="text-[14px] font-semibold text-accent">Read case study →</span>
+                  <span className="text-[14px] font-semibold text-accent">See the example →</span>
                 </div>
               </Link>
             </FadeIn>

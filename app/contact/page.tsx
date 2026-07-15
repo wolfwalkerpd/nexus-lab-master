@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact | Nexus Lab Systems",
     description: "Book a free website teardown — a few quick steps, fast reply.",
-    url: "https://www.nexuslabsystems.com/contact",
+    url: "https://nexuslabsystems.com/contact",
   },
 };
 

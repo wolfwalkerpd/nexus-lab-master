@@ -2,7 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
 import { INDUSTRY_PAGES, getIndustry } from "@/lib/industries";
+import { breadcrumbSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
@@ -16,7 +18,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     openGraph: {
       title: `${ind.title} | Nexus Lab Systems`,
       description: ind.intro,
-      url: `https://www.nexuslabsystems.com/industries/${ind.slug}`,
+      url: `https://nexuslabsystems.com/industries/${ind.slug}`,
     },
   };
 }
@@ -31,6 +33,13 @@ export default function IndustryDetail({ params }: { params: { slug: string } })
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Industries", path: "/industries" },
+          { name: ind.label, path: `/industries/${ind.slug}` },
+        ])}
+      />
       <section className="wrap grid grid-cols-1 items-center gap-10 pb-[30px] pt-section lg:grid-cols-[1.1fr_0.9fr] lg:gap-[52px]">
         <FadeIn>
           <div className="mb-4 font-mono text-[12px] font-medium uppercase tracking-[0.2em]">

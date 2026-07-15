@@ -2,7 +2,33 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
 import { CASE_STUDIES, getCase } from "@/lib/cases";
+import { breadcrumbSchema } from "@/lib/schema";
+import type { Metadata } from "next";
+
+const BASE = "https://nexuslabsystems.com";
+
+// Without this, each case study inherited the root canonical ("/") and looked
+// like a duplicate of the homepage to Google. Now every case study gets its own
+// title, description and self-referencing canonical.
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const c = getCase(params.slug);
+  if (!c) return { title: "Case Study Not Found" };
+
+  return {
+    title: c.title,
+    description: c.intro,
+    alternates: { canonical: `/work/${c.slug}` },
+    openGraph: {
+      title: `${c.title} | Nexus Lab Systems`,
+      description: c.intro,
+      url: `${BASE}/work/${c.slug}`,
+      type: "article",
+      images: c.img ? [{ url: c.img, alt: c.client }] : undefined,
+    },
+  };
+}
 
 export function generateStaticParams() {
   return CASE_STUDIES.map((c) => ({ slug: c.slug }));
@@ -14,18 +40,29 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/work" },
+          { name: c.client, path: `/work/${c.slug}` },
+        ])}
+      />
       <FadeIn>
         <section className="mx-auto max-w-[960px] px-gutter pb-7 pt-section">
           <div className="mb-[18px] font-mono text-[12px] font-medium uppercase tracking-[0.2em]">
             <Link href="/work" className="text-muted3">Work</Link> / {c.client}
           </div>
           <div className="mb-5 flex flex-wrap gap-[10px]">
+            <span className="rounded-full bg-accent px-[13px] py-[5px] text-[12px] font-semibold text-white">Example project</span>
             {c.tags.map((t) => (
               <span key={t} className="rounded-full bg-panel px-[13px] py-[5px] text-[12px] font-medium text-muted">{t}</span>
             ))}
           </div>
           <h1 className="serif mb-[18px] text-h1 tracking-[-0.5px]">{c.title}</h1>
           <p className="max-w-[680px] text-lead text-muted">{c.intro}</p>
+          <p className="mt-4 max-w-[680px] text-[13.5px] leading-relaxed text-muted3">
+            An illustrative example of how we&apos;d approach this kind of business — it shows our process and what we build, not a specific client&apos;s reported results.
+          </p>
         </section>
       </FadeIn>
 
@@ -58,6 +95,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       </section>
 
       <section className="mx-auto max-w-[960px] px-gutter py-[34px]">
+        <div className="mb-4 font-mono text-[11px] uppercase tracking-[0.16em] text-muted3">What it&apos;s built to do</div>
         <div className="grid grid-cols-2 gap-5 border-y py-[30px] hair md:grid-cols-4">
           {c.metrics.map(([v, l], i) => (
             <FadeIn key={l} delay={i * 80}>

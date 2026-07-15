@@ -2,7 +2,9 @@ import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
 import PriceTag from "@/components/PriceTag";
+import JsonLd from "@/components/JsonLd";
 import { CARE_PLANS } from "@/lib/site";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
     title: "Website Care Plans & Maintenance | Nexus Lab Systems",
     description:
       "Monthly care plans keep your website fast, secure and up to date.",
-    url: "https://www.nexuslabsystems.com/services/care-plan",
+    url: "https://nexuslabsystems.com/services/care-plans",
   },
 };
 
@@ -32,6 +34,21 @@ const included = [
 export default function CarePlansPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Website Care Plans & Maintenance",
+            description:
+              "Monthly website care — managed hosting, security, backups, updates and edits — so your site stays fast, safe and current.",
+            path: "/services/care-plans",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "Care Plans & Maintenance", path: "/services/care-plans" },
+          ]),
+        ]}
+      />
       <section className="wrap grid grid-cols-1 items-center gap-10 pb-[30px] pt-section lg:grid-cols-[1.1fr_0.9fr] lg:gap-[52px]">
         <FadeIn>
           <div className="mb-4 font-mono text-[12px] font-medium uppercase tracking-[0.2em]">

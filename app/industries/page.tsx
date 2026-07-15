@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Industries | Nexus Lab Systems",
     description:
       "Tailored websites and SEO for dental, professional services and trades.",
-    url: "https://www.nexuslabsystems.com/industries",
+    url: "https://nexuslabsystems.com/industries",
   },
 };
 

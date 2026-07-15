@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Resources & Blog | Nexus Lab Systems",
     description:
       "Practical web design and SEO guides for local service businesses.",
-    url: "https://www.nexuslabsystems.com/blog",
+    url: "https://nexuslabsystems.com/blog",
   },
 };
 

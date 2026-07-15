@@ -18,17 +18,17 @@ Nexus Lab Systems is a solo web studio founded by Mohammad Jawad Samadi, a pract
  
 ## Key pages
  
-- [Home](https://www.nexuslabsystems.com): Overview and primary entry point.
-- [Services](https://www.nexuslabsystems.com/services): Web design, SEO, and maintenance.
-- [Website Design & Development](https://www.nexuslabsystems.com/services/website-design)
-- [SEO & Local SEO](https://www.nexuslabsystems.com/services/seo)
-- [Website Care Plans & Maintenance](https://www.nexuslabsystems.com/services/care-plans)
-- [Industries](https://www.nexuslabsystems.com/industries): Verticals served.
-- [Work & Case Studies](https://www.nexuslabsystems.com/work): Before-and-after teardowns and results.
-- [Pricing](https://www.nexuslabsystems.com/pricing): One-off build packages plus monthly care plans.
-- [About](https://www.nexuslabsystems.com/about): The founder story and how the studio works.
-- [Contact](https://www.nexuslabsystems.com/contact): Book a free website teardown.
-- [Blog](https://www.nexuslabsystems.com/blog): Guides on web design and SEO for local businesses.
+- [Home](https://nexuslabsystems.com): Overview and primary entry point.
+- [Services](https://nexuslabsystems.com/services): Web design, SEO, and maintenance.
+- [Website Design & Development](https://nexuslabsystems.com/services/website-design)
+- [SEO & Local SEO](https://nexuslabsystems.com/services/seo)
+- [Website Care Plans & Maintenance](https://nexuslabsystems.com/services/care-plans)
+- [Industries](https://nexuslabsystems.com/industries): Verticals served.
+- [Work & Case Studies](https://nexuslabsystems.com/work): Before-and-after teardowns and results.
+- [Pricing](https://nexuslabsystems.com/pricing): One-off build packages plus monthly care plans.
+- [About](https://nexuslabsystems.com/about): The founder story and how the studio works.
+- [Contact](https://nexuslabsystems.com/contact): Book a free website teardown.
+- [Blog](https://nexuslabsystems.com/blog): Guides on web design and SEO for local businesses.
  
 ## How to work with us
  
@@ -45,4 +45,4 @@ The primary next step for any prospective client is to book a free website teard
 ## Contact
  
 - Email: contact@nexuslabsystems.com
-- Website: https://www.nexuslabsystems.com
+- Website: https://nexuslabsystems.com

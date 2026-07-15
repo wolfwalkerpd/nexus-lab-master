@@ -10,7 +10,7 @@ import { CASE_STUDIES } from "@/lib/cases";
 import { INDUSTRY_PAGES } from "@/lib/industries";
 import { POSTS } from "@/lib/posts";
 
-const BASE = "https://www.nexuslabsystems.com";
+const BASE = "https://nexuslabsystems.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

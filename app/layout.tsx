@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { Instrument_Serif, Work_Sans, IBM_Plex_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import PageLoader from "@/components/PageLoader";
 import PromoBanner from "@/components/PromoBanner";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import JsonLd from "@/components/JsonLd";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { Analytics } from "@vercel/analytics/next"
 
 const display = Instrument_Serif({
@@ -31,7 +34,7 @@ const mono = IBM_Plex_Mono({
 // These are the SITE-WIDE DEFAULTS. Every page inherits them unless it
 // exports its own metadata (see per-page-metadata.ts).
 
-const BASE = "https://www.nexuslabsystems.com";
+const BASE = "https://nexuslabsystems.com";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -159,12 +162,21 @@ export default function RootLayout({
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body>
+        {/* Sitewide identity — who we are + the website entity. */}
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <PageLoader />
         <PromoBanner />
         <SiteHeader />
         <Analytics />
         <main>{children}</main>
         <SiteFooter />
+
+        {/* Contentsquare (UXA) — loads site-wide via next/script.
+            afterInteractive ≈ the `defer` in the original snippet. */}
+        <Script
+          src="https://t.contentsquare.net/uxa/53fcc09074541.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

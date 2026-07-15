@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Pricing | Nexus Lab Systems",
     description:
       "One-off build packages plus monthly website care plans. Clear and honest.",
-    url: "https://www.nexuslabsystems.com/pricing",
+    url: "https://nexuslabsystems.com/pricing",
   },
 };
 
