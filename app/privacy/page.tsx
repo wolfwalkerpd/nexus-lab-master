@@ -1,4 +1,20 @@
 import FadeIn from "@/components/FadeIn";
+import type { Metadata } from "next";
+
+// Without its own metadata this page inherited the root layout's — including the
+// homepage title AND canonical "/", making Google treat it as a homepage
+// duplicate. A self-referencing canonical fixes that.
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "How Nexus Lab Systems collects, uses and protects your personal data, in line with UK GDPR and the Data Protection Act 2018.",
+  alternates: { canonical: "/privacy" },
+  openGraph: {
+    title: "Privacy Policy | Nexus Lab Systems",
+    description: "How we handle and protect your personal data.",
+    url: "https://nexuslabsystems.com/privacy",
+  },
+};
 
 const sections: [string, React.ReactNode][] = [
   ["1. Who we are", <>Nexus LabSystems is a website design and digital marketing studio based in the United Kingdom. For any privacy questions, or to exercise your rights, contact us at <a href="mailto:contact@nexuslabsystems.com">contact@nexuslabsystems.com</a>. Our registered address is [Company address placeholder].</>],
