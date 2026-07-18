@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { EMAIL } from "@/lib/site";
+import { confirmationEmail } from "@/lib/emails";
 
 // Runs on the server only — the Resend API key never reaches the browser.
 export const runtime = "nodejs";
@@ -99,6 +100,7 @@ export async function POST(req: Request) {
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n");
 
   try {
+    // 1) Notify the business — this is the critical send (the actual lead).
     const { error } = await resend.emails.send({
       from: FROM,
       to: [TO],
@@ -114,6 +116,25 @@ export async function POST(req: Request) {
         { error: "We couldn't send your message. Please try again or email us directly." },
         { status: 502 },
       );
+    }
+
+    // 2) Auto-confirmation to the enquirer — best-effort. If it fails, the lead
+    //    still reached us, so the submission is still a success for the user.
+    try {
+      const confirm = confirmationEmail({ firstName: name.split(" ")[0] });
+      const { error: confirmError } = await resend.emails.send({
+        from: FROM,
+        to: [email],
+        replyTo: TO, // a reply comes back to us
+        subject: confirm.subject,
+        html: confirm.html,
+        text: confirm.text,
+      });
+      if (confirmError) {
+        console.error("[contact] confirmation email error:", confirmError);
+      }
+    } catch (confirmErr) {
+      console.error("[contact] confirmation send failed:", confirmErr);
     }
 
     return NextResponse.json({ ok: true });
