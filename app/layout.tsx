@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Nexus Lab Systems builds fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed and maintained by one person, start to finish.",
+    "Fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed and maintained by one person, start to finish.",
 
 keywords: [
   "web design agency",

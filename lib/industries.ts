@@ -3,6 +3,9 @@ export type IndustryPage = {
   label: string;
   title: string;
   intro: string;
+  /** ≤160-char meta description. The `intro` is longer (visible lead paragraph),
+   *  so keep this separate to avoid an over-length meta description. */
+  metaDescription: string;
   domain: string;
   hue: string;
   previewLabel: string;
@@ -27,6 +30,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     label: "Dental & Healthcare",
     title: "Websites that keep the chair full.",
     intro: "Patients choose a practice they trust — and book the one that makes it easy. We build dental and healthcare sites that earn that trust and turn visitors into booked appointments.",
+    metaDescription: "Dental & healthcare websites built to earn patient trust and turn visitors into booked appointments — with online booking and local SEO.",
     domain: "your-practice.co.uk", hue: "#2FA8C4", previewLabel: "Dental",
     head: "Brighter smiles, fully booked", sub: "Online booking, new-patient offers and reviews that build trust.",
     cta: "Book a check-up", cards: ["Online booking", "Patient offers", "5★ reviews"],
@@ -55,6 +59,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     label: "Professional Services",
     title: "Credibility that wins the client.",
     intro: "Solicitors, accountants and consultants are chosen on trust. We build sites that make you look like the safe, obvious choice — and make getting in touch effortless.",
+    metaDescription: "Websites for solicitors, accountants and consultants — built on trust, designed to make you the obvious choice and getting in touch effortless.",
     domain: "your-firm.co.uk", hue: "#2E7D5B", previewLabel: "Professional",
     head: "Credibility that wins clients", sub: "Clear services, easy contact and trust built in from the first click.",
     cta: "Request a call", cards: ["Clear services", "Case results", "Quick contact"],
@@ -83,6 +88,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     label: "Trades & Local Business",
     title: "Quotes in. Jobs won.",
     intro: "Roofers, electricians, builders and landscapers — your next customer is on their phone right now. We build sites that show your work, capture the quote, and make you look bigger than the competition.",
+    metaDescription: "Websites for roofers, electricians and builders that show your work, capture the quote and make you look bigger than the competition.",
     domain: "your-roofing.co.uk", hue: "#E5892B", previewLabel: "Trades",
     head: "Quotes in, jobs won", sub: "Show your work, capture leads and look bigger than you are.",
     cta: "Get a free quote", cards: ["Instant quotes", "Photo gallery", "Call now"],

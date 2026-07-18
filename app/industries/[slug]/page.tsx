@@ -13,11 +13,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
   return {
     title: ind.title,
-    description: ind.intro,
+    description: ind.metaDescription,
     alternates: { canonical: `/industries/${ind.slug}` },
     openGraph: {
       title: `${ind.title} | Nexus Lab Systems`,
-      description: ind.intro,
+      description: ind.metaDescription,
       url: `https://nexuslabsystems.com/industries/${ind.slug}`,
     },
   };
