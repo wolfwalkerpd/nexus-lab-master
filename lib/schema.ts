@@ -90,6 +90,7 @@ export function blogPostingSchema(post: {
   description: string;
   author: string;
   image?: string;
+  datePublished?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -102,6 +103,9 @@ export function blogPostingSchema(post: {
     author: { "@type": "Person", name: post.author },
     publisher: { "@id": ORG_ID },
     inLanguage: "en-GB",
+    ...(post.datePublished
+      ? { datePublished: post.datePublished, dateModified: post.datePublished }
+      : {}),
   };
 }
 

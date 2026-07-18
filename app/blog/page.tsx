@@ -1,7 +1,7 @@
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
 import BlogExplorer from "@/components/BlogExplorer";
-import { POSTS } from "@/lib/posts";
+import { CARDS, CATEGORIES } from "@/lib/posts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function BlogPage() {
         </section>
       </FadeIn>
 
-      <BlogExplorer posts={POSTS} />
+      <BlogExplorer cards={CARDS} categories={CATEGORIES} />
 
       <CtaBand heading="Rather we just did it for you?" sub="Skip the reading list. Book a free teardown and we'll show you the wins specific to your site." />
     </>
