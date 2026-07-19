@@ -168,7 +168,9 @@ function fromOld(p: OldPost): BlogPost {
     sortKey: d.sortKey,
     readingTime: p.read,
     heroGradient: p.heroGrad,
-    image: p.image,
+    // Legacy posts now use a matching generated banner too (uniform with the
+    // rest of the blog), rather than their old photo.
+    image: `/images/${p.slug}.svg`,
     author: p.author,
     authorBio: p.authorBio,
     content: { intro: p.intro, sections, keyTakeaways: [], outro: [p.closing] },

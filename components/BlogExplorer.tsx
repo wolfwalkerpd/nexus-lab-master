@@ -72,7 +72,7 @@ export default function BlogExplorer({
               onChange={(e) => setQuery(e.target.value)}
               aria-label="Search articles"
               placeholder="Search articles — try “SEO”, “Camden”, “pricing”…"
-              className="w-full rounded-full border bg-transparent py-[13px] pl-11 pr-11 text-[15px] text-ink outline-none transition-colors placeholder:text-muted3 focus:border-ink/40 hair"
+              className="w-full rounded-full border bg-transparent py-[13px] pl-11 pr-11 text-[15px] text-ink outline-none transition-colors placeholder:text-muted3 focus:border-ink/40 hair [&::-webkit-search-cancel-button]:appearance-none"
             />
             {query && (
               <button
