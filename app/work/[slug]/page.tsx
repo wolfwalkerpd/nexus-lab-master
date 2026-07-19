@@ -17,7 +17,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!c) return { title: "Case Study Not Found" };
 
   return {
-    title: c.title,
+    // Descriptive, keyword-bearing SEO title (the on-page H1 keeps the punchy
+    // marketing headline c.title). e.g. "Bright Smile Dental — Dental Case Study".
+    title: `${c.client} — ${c.tags[0]} Case Study`,
     description: c.intro,
     alternates: { canonical: `/work/${c.slug}` },
     openGraph: {

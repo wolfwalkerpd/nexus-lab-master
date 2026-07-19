@@ -1,5 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
+import { contactPageSchema, breadcrumbSchema } from "@/lib/schema";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact & Book a Free Teardown",
@@ -16,6 +18,15 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <section className="flex min-h-[74dvh] items-center justify-center px-gutter pb-[72px] pt-12">
+      <JsonLd
+        data={[
+          contactPageSchema(),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
+      />
       <FadeIn className="w-full max-w-[640px]">
         <ContactForm />
       </FadeIn>

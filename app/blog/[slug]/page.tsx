@@ -20,11 +20,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!post) return { title: "Article Not Found" };
 
   return {
-    title: post.title,
+    // Use the purpose-built metaTitle (≤60 chars) as the whole tag — `absolute`
+    // skips the "| Nexus Lab Systems" template so these long-tail article titles
+    // show in full in search results instead of truncating. The H1 keeps the
+    // longer, richer post.title.
+    title: { absolute: post.metaTitle },
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: `${post.title} | Nexus Lab Systems`,
+      title: `${post.metaTitle} | Nexus Lab Systems`,
       description: post.description,
       url: `${BASE}/blog/${post.slug}`,
       type: "article",

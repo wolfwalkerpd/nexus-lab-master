@@ -2,18 +2,20 @@ import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
 import CtaBand from "@/components/CtaBand";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
 import { ABOUT_FAQ } from "@/lib/site";
+import { aboutPageSchema, breadcrumbSchema } from "@/lib/schema";
 import { Metadata } from "next";
 import Image from "next/image";
 
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About — The Studio Behind Your Website",
   description:
     "One person who designs, builds and answers the phone — a practising clinician who builds websites for local service businesses. No handoffs, no ticket queues.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About | Nexus Lab Systems",
+    title: "About — The Studio Behind Your Website | Nexus Lab Systems",
     description:
       "Meet the one person who designs, builds and maintains your website — start to finish.",
     url: "https://nexuslabsystems.com/about",
@@ -37,6 +39,15 @@ const steps = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          aboutPageSchema(),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+        ]}
+      />
       <FadeIn>
         <section className="mx-auto max-w-[900px] px-gutter pb-5 pt-section text-center">
           <div className="eyebrow mb-[18px]">About</div>

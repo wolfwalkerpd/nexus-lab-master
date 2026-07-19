@@ -4,10 +4,11 @@ import { EMAIL } from "@/lib/site";
 
 export const BASE = "https://nexuslabsystems.com";
 
-// Stable @id anchors so other nodes (publisher, provider) can reference the org
-// and site instead of repeating them.
+// Stable @id anchors so other nodes (publisher, provider, author) can reference
+// the org, site and founder instead of repeating them.
 export const ORG_ID = `${BASE}/#organization`;
 export const WEBSITE_ID = `${BASE}/#website`;
+export const PERSON_ID = `${BASE}/#founder`;
 
 const SAME_AS = [
   "https://www.instagram.com/nexuslab.systems",
@@ -16,6 +17,18 @@ const SAME_AS = [
   "https://www.linkedin.com/in/mohammad-javad-samadi-13b134222/",
   "https://www.tiktok.com/@nexuslabsystems",
 ];
+
+// The founder — a real Person entity. Defined inline on the sitewide org so its
+// @id resolves everywhere, then referenced by blog articles' `author` (E-E-A-T).
+const FOUNDER = {
+  "@type": "Person",
+  "@id": PERSON_ID,
+  name: "Mohammad Javad Samadi",
+  jobTitle: "Founder",
+  url: `${BASE}/about`,
+  worksFor: { "@id": ORG_ID },
+  sameAs: ["https://www.linkedin.com/in/mohammad-javad-samadi-13b134222/"],
+};
 
 /** Who Nexus Lab Systems is — a UK web-design/SEO studio. Sitewide. */
 export function organizationSchema() {
@@ -29,8 +42,22 @@ export function organizationSchema() {
     image: `${BASE}/opengraph-image.png`,
     description:
       "Nexus Lab Systems builds fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed and maintained by one person, start to finish.",
+    slogan: "Websites and SEO that convert.",
     email: EMAIL,
-    founder: { "@type": "Person", name: "Mohammad Javad Samadi" },
+    // Fixed-price builds run £795–£3,950; care plans from £39/mo. A typical
+    // range, so it stays accurate through temporary offers.
+    priceRange: "£795–£3,950",
+    currenciesAccepted: "GBP",
+    paymentAccepted: "Bank transfer, Card",
+    numberOfEmployees: { "@type": "QuantitativeValue", value: 1 },
+    founder: FOUNDER,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: EMAIL,
+      areaServed: "GB",
+      availableLanguage: "English",
+    },
     // No public street address; the studio serves the UK, mostly remotely.
     areaServed: { "@type": "Country", name: "United Kingdom" },
     address: { "@type": "PostalAddress", addressCountry: "GB" },
@@ -42,6 +69,15 @@ export function organizationSchema() {
       "Google Business Profile",
       "Website maintenance",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Web design, SEO and care plans",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Design & Development", url: `${BASE}/services/website-design` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO & Local SEO", url: `${BASE}/services/seo` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Care Plans & Maintenance", url: `${BASE}/services/care-plans` } },
+      ],
+    },
     sameAs: SAME_AS,
   };
 }
@@ -100,7 +136,9 @@ export function blogPostingSchema(post: {
     headline: post.title,
     description: post.description,
     image: post.image ? `${BASE}${post.image}` : `${BASE}/opengraph-image.png`,
-    author: { "@type": "Person", name: post.author },
+    // Reference the founder Person entity (defined on the sitewide org) so every
+    // article is attributed to one real, linkable author.
+    author: { "@type": "Person", "@id": PERSON_ID, name: post.author },
     publisher: { "@id": ORG_ID },
     inLanguage: "en-GB",
     ...(post.datePublished
@@ -122,5 +160,38 @@ export function serviceSchema(s: {
     url: `${BASE}${s.path}`,
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "United Kingdom" },
+  };
+}
+
+/** The contact page — marks it as the place to reach the business. */
+export function contactPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${BASE}/contact#webpage`,
+    url: `${BASE}/contact`,
+    name: "Contact Nexus Lab Systems",
+    description:
+      "Book a free website teardown. Tell us about your business and we'll get back to you fast.",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": ORG_ID },
+    inLanguage: "en-GB",
+  };
+}
+
+/** The about page — its main entity is the founder, tying the person to the org. */
+export function aboutPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${BASE}/about#webpage`,
+    url: `${BASE}/about`,
+    name: "About Nexus Lab Systems",
+    description:
+      "One person who designs, builds and maintains websites for local service businesses across the UK — start to finish.",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": ORG_ID },
+    mainEntity: { "@id": PERSON_ID },
+    inLanguage: "en-GB",
   };
 }

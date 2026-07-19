@@ -7,12 +7,12 @@ import { PROMO, promoLive, seatsLeft } from "@/lib/promo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: "Pricing — Web Design, SEO & Care Plans",
   description:
     "Clear, honest pricing — one-off website build packages plus monthly care plans to keep your site fast, secure and up to date. No agency overhead baked in.",
   alternates: { canonical: "/pricing" },
   openGraph: {
-    title: "Pricing | Nexus Lab Systems",
+    title: "Pricing — Web Design, SEO & Care Plans | Nexus Lab Systems",
     description:
       "One-off build packages plus monthly website care plans. Clear and honest.",
     url: "https://nexuslabsystems.com/pricing",

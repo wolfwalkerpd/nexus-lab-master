@@ -12,7 +12,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!ind) return { title: "Industry Not Found" };
 
   return {
-    title: ind.title,
+    // Descriptive SEO title with the sector + keyword (the on-page H1 keeps the
+    // marketing headline ind.title). e.g. "Dental & Healthcare Website Design".
+    title: `${ind.label} Website Design`,
     description: ind.metaDescription,
     alternates: { canonical: `/industries/${ind.slug}` },
     openGraph: {

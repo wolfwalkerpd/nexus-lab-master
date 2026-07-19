@@ -30,6 +30,8 @@ export type BlogContent = {
 export type BlogPost = {
   slug: string;
   title: string;
+  /** SEO title tag (≤60 chars, no brand suffix). Falls back to `title`. */
+  metaTitle: string;
   description: string;
   excerpt: string;
   category: string;
@@ -96,6 +98,7 @@ type OldPost = {
 type NewPost = {
   slug: string;
   title: string;
+  metaTitle: string;
   description: string;
   excerpt: string;
   category: string;
@@ -157,6 +160,7 @@ function fromOld(p: OldPost): BlogPost {
   return {
     slug: p.slug,
     title: p.title,
+    metaTitle: p.title,
     description: p.description,
     excerpt: p.description,
     category: p.category,
@@ -184,6 +188,7 @@ function fromNew(p: NewPost): BlogPost {
   return {
     slug: p.slug,
     title: p.title,
+    metaTitle: p.metaTitle || p.title,
     description: p.description,
     excerpt: p.excerpt || p.description,
     category: p.category,
