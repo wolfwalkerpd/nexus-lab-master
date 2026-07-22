@@ -38,7 +38,9 @@ export function organizationSchema() {
     "@id": ORG_ID,
     name: "Nexus Lab Systems",
     url: BASE,
-    logo: `${BASE}/icon.svg`,
+    // Raster logo (≥112px, PNG) — the most reliable format for Google's logo /
+    // knowledge-panel feature.
+    logo: `${BASE}/icon-512.png`,
     image: `${BASE}/opengraph-image.png`,
     description:
       "Nexus Lab Systems builds fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed and maintained by one person, start to finish.",
