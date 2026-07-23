@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services — Web Design, SEO & Maintenance",
   description:
-    "Websites, SEO and ongoing website care for local service businesses. One person, start to finish — no agency handoffs, no junior teams.",
+    "Websites, SEO and ongoing website care for local service businesses. A small, dedicated team, start to finish — no faceless agency handoffs, no juniors on your budget.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Services | Nexus Lab Systems",

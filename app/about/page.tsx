@@ -12,12 +12,12 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About — The Studio Behind Your Website",
   description:
-    "One person who designs, builds and answers the phone — a practising clinician who builds websites for local service businesses. No handoffs, no ticket queues.",
+    "A small, hands-on team that designs, builds and looks after websites for local service businesses. You talk to the people doing the work — no handoffs, no ticket queues.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About — The Studio Behind Your Website | Nexus Lab Systems",
     description:
-      "Meet the one person who designs, builds and maintains your website — start to finish.",
+      "Meet the small team that designs, builds and maintains your website — start to finish.",
     url: "https://nexuslabsystems.com/about",
   },
 };

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed and maintained by one person, start to finish.",
+    "Fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed, built and maintained by a small, dedicated team, start to finish.",
 
 keywords: [
   "web design agency",
@@ -110,7 +110,7 @@ keywords: [
     siteName: "Nexus Lab Systems",
     title: "Nexus Lab Systems | Websites & SEO That Convert",
     description:
-      "Fast, premium websites and SEO for local service businesses — built and maintained by one person, start to finish.",
+      "Fast, premium websites and SEO for local service businesses — built and maintained by a small, dedicated team, start to finish.",
     images: [
       {
         url: "/opengraph-image.png", // 1200×630, place in app/ or public/
@@ -126,7 +126,7 @@ keywords: [
     card: "summary_large_image",
     title: "Nexus Lab Systems | Websites & SEO That Convert",
     description:
-      "Fast, premium websites and SEO for local service businesses — built and maintained by one person.",
+      "Fast, premium websites and SEO for local service businesses — built and maintained by a small, dedicated team.",
     images: ["/opengraph-image.png"],
     // creator: "@yourhandle", // add if you have one
   },

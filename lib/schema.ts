@@ -43,7 +43,7 @@ export function organizationSchema() {
     logo: `${BASE}/icon-512.png`,
     image: `${BASE}/opengraph-image.png`,
     description:
-      "Nexus Lab Systems builds fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed and maintained by one person, start to finish.",
+      "Nexus Lab Systems builds fast, premium websites and SEO for dentists, tradespeople and local service businesses — designed, built and maintained by a small, dedicated team, start to finish.",
     slogan: "Websites and SEO that convert.",
     email: EMAIL,
     // Fixed-price builds run £795–£3,950; care plans from £39/mo. A typical
@@ -51,7 +51,6 @@ export function organizationSchema() {
     priceRange: "£795–£3,950",
     currenciesAccepted: "GBP",
     paymentAccepted: "Bank transfer, Card",
-    numberOfEmployees: { "@type": "QuantitativeValue", value: 1 },
     founder: FOUNDER,
     contactPoint: {
       "@type": "ContactPoint",
@@ -190,7 +189,7 @@ export function aboutPageSchema() {
     url: `${BASE}/about`,
     name: "About Nexus Lab Systems",
     description:
-      "One person who designs, builds and maintains websites for local service businesses across the UK — start to finish.",
+      "A small, hands-on team that designs, builds and maintains websites for local service businesses across the UK — start to finish.",
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     mainEntity: { "@id": PERSON_ID },

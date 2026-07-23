@@ -85,10 +85,10 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 href={c.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Visit the live ${c.client} website (opens in a new tab)`}
+                aria-label={`View the live demo of the ${c.client} website (opens in a new tab)`}
                 className="absolute bottom-4 right-4 inline-flex min-h-[40px] items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-bg no-underline shadow-[0_6px_20px_rgba(0,0,0,0.28)] transition-transform hover:-translate-y-0.5"
               >
-                Visit
+                View live demo
                 <span aria-hidden>↗</span>
               </a>
             )}
